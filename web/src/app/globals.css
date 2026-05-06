@@ -1,43 +1,48 @@
 @import "tailwindcss";
 
 /* ──────────────────────────────────────────────────────────────
-   CW&D Design Tokens
+   CW&D Design Tokens — official brand palette
    ────────────────────────────────────────────────────────────── */
 @theme {
-  /* Brand palette — derived from the CW&D logo */
-  --color-cream-50: #faf7f1;
-  --color-cream: #f5f0e6;
-  --color-cream-200: #ece4d3;
+  /* Brand palette */
+  --color-green: #141f18;          /* Deep Green — primary dark */
+  --color-green-soft: #1d2a22;     /* slightly lifted for hover/strokes */
+  --color-green-deep: #0e1611;     /* deeper for shadows/footer */
 
-  --color-ink: #1a1a1a;
-  --color-ink-soft: #2a2a2a;
+  --color-ivory: #e6ddd0;          /* Ivory — primary light */
+  --color-ivory-warm: #efe7da;     /* lifted ivory for cards on ivory */
+  --color-ivory-deep: #d6cbb8;     /* deeper ivory for borders */
 
-  --color-muted: #8a8478;
-  --color-muted-soft: #b4ada0;
-  --color-rule: #d8d2c4;
+  --color-bronze: #a0724a;         /* Bronze — accent */
+  --color-bronze-soft: #b88865;    /* hover */
+  --color-bronze-deep: #835c3b;    /* press / muted */
 
-  --color-bronze: #8b7355;
+  /* Neutral support derived from brand */
+  --color-rule: rgba(20, 31, 24, 0.12);     /* hairlines on ivory */
+  --color-rule-light: rgba(230, 221, 208, 0.18); /* hairlines on green */
+  --color-muted: rgba(20, 31, 24, 0.55);    /* secondary text on ivory */
+  --color-muted-light: rgba(230, 221, 208, 0.7); /* secondary text on green */
 
   /* Semantic */
-  --color-background: var(--color-cream);
-  --color-foreground: var(--color-ink);
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-green);
 
-  /* Typography — Playfair Display (serif, matches logo) + Inter (body) */
+  /* Typography */
   --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
   --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
 
-  /* Container width */
-  --container-width: 1200px;
+  /* Layout */
+  --container-width: 1280px;
 }
 
-/* Base layer */
+/* Base */
 :root {
   color-scheme: light;
 }
 
 html {
-  background: var(--color-cream);
-  color: var(--color-ink);
+  background: var(--color-ivory);
+  color: var(--color-green);
 }
 
 body {
@@ -51,21 +56,40 @@ body {
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
   font-weight: 500;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
-/* Tracked-out subtitle utility (matches the CW&D wordmark style) */
+/* Tracked-out eyebrow utility — matches the wordmark style on the logo */
 .eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  color: var(--color-bronze);
+}
+
+.eyebrow-muted {
   color: var(--color-muted);
 }
 
-/* Subtle hairline rule */
+.eyebrow-light {
+  color: var(--color-muted-light);
+}
+
+/* Hairline rules */
 .rule {
   height: 1px;
   background: var(--color-rule);
+}
+
+.rule-bronze {
+  height: 1px;
+  background: var(--color-bronze);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-bronze);
+  color: var(--color-ivory);
 }

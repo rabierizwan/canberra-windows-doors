@@ -19,15 +19,17 @@ export function SpecTable({ spec }: { spec: ProductSpec }) {
   if (rows.length === 0) return null;
 
   return (
-    <div className="border border-rule/60 bg-cream-50">
-      <dl className="divide-y divide-rule/60">
+    <div className="border border-rule bg-ivory-warm">
+      <dl className="divide-y divide-rule">
         {rows.map((key) => (
           <div
             key={key}
             className="grid grid-cols-2 gap-4 px-6 py-4 text-sm"
           >
-            <dt className="eyebrow text-muted not-italic">{FIELD_LABELS[key]}</dt>
-            <dd className="text-ink font-medium">{spec[key]}</dd>
+            <dt className="eyebrow eyebrow-muted not-italic">
+              {FIELD_LABELS[key]}
+            </dt>
+            <dd className="text-green font-medium">{spec[key]}</dd>
           </div>
         ))}
       </dl>

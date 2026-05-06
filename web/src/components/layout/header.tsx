@@ -5,12 +5,12 @@ import { Logo } from "@/components/ui/logo";
 import { site } from "@/lib/site";
 
 /**
- * Top-of-page header. Mobile nav is intentionally minimal for v1 —
- * upgrade to a full sheet/drawer once the page-template work is done.
+ * Sticky header on ivory. Phone number always visible (trades customers call).
+ * Mobile nav drawer is intentionally deferred to Phase 1 polish.
  */
 export function Header() {
   return (
-    <header className="border-b border-rule/60 bg-cream/90 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-b border-rule bg-ivory/85 backdrop-blur-md sticky top-0 z-50">
       <Container as="div" className="flex items-center justify-between py-5">
         <Logo showWordmark={false} />
 
@@ -19,14 +19,21 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="eyebrow text-ink hover:text-bronze transition-colors"
+              className="eyebrow eyebrow-muted hover:text-bronze transition-colors"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden sm:block">
+        <div className="flex items-center gap-6">
+          <a
+            href={site.contact.phonePrimaryHref}
+            className="hidden sm:inline-block eyebrow text-green hover:text-bronze transition-colors"
+            aria-label={`Call us at ${site.contact.phonePrimary}`}
+          >
+            {site.contact.phonePrimary}
+          </a>
           <Button href="/request-a-quote" variant="primary" size="sm">
             Request a Quote
           </Button>

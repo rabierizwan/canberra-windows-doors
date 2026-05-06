@@ -3,9 +3,14 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { Media } from "@/components/ui/media";
 import { SpecTable } from "@/components/product/spec-table";
 import { OptionList } from "@/components/product/option-list";
-import { getProductBySlug, getAllSlugs, getProductsByCategory } from "@/data/products";
+import {
+  getProductBySlug,
+  getAllSlugs,
+  getProductsByCategory,
+} from "@/data/products";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -36,44 +41,65 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* HERO */}
-      <section className="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-rule/60">
-        <Container>
-          <span className="eyebrow capitalize">{product.category}</span>
-          <h1 className="mt-4 font-display text-5xl md:text-7xl text-ink leading-[1.05] max-w-3xl">
-            {product.heading}
-          </h1>
-          {product.subheading && (
-            <p className="mt-6 text-lg text-bronze max-w-2xl">{product.subheading}</p>
-          )}
-          {product.intro?.length > 0 && (
-            <div className="mt-8 max-w-2xl space-y-4 text-lg text-ink/75 leading-relaxed">
-              {product.intro.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+      {/* HERO — image + type, asymmetric */}
+      <section className="bg-ivory border-b border-rule">
+        <Container className="pt-16 pb-20 md:pt-20 md:pb-24">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              <div className="flex items-center gap-4">
+                <span className="block w-8 h-px bg-bronze" />
+                <span className="eyebrow capitalize">{product.category}</span>
+              </div>
+              <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl text-green leading-[1.05]">
+                {product.heading}
+              </h1>
+              {product.subheading && (
+                <p className="mt-5 text-lg text-bronze">{product.subheading}</p>
+              )}
+              {product.intro?.length > 0 && (
+                <div className="mt-8 space-y-4 text-green/75 leading-relaxed">
+                  {product.intro.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+              <div className="mt-10">
+                <Button href="/request-a-quote" variant="primary" size="lg">
+                  {product.ctaLabel ?? "Request a Quote"}
+                </Button>
+              </div>
             </div>
-          )}
-          <div className="mt-10">
-            <Button href="/request-a-quote" variant="primary" size="lg">
-              {product.ctaLabel ?? "Request a Quote"}
-            </Button>
+            <div className="lg:col-span-7 order-1 lg:order-2">
+              <Media
+                src={product.image}
+                alt={product.imageAlt ?? product.heading}
+                aspect="aspect-[4/3]"
+                tone="green"
+                placeholderLabel={`${product.heading} · 4:3`}
+                priority
+                sizes="(min-width: 1024px) 58vw, 100vw"
+              />
+            </div>
           </div>
         </Container>
       </section>
 
       {/* BENEFITS */}
       {product.benefits && product.benefits.length > 0 && (
-        <section className="py-20">
+        <section className="py-24 md:py-32">
           <Container>
-            <span className="eyebrow">Why choose</span>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl text-ink">
+            <div className="flex items-center gap-4 mb-12">
+              <span className="block w-8 h-px bg-bronze" />
+              <span className="eyebrow">Why choose</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl text-green max-w-2xl mb-16">
               The difference is in the detail.
             </h2>
-            <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
               {product.benefits.map((b, i) => (
-                <div key={i} className="border-t border-ink pt-6">
-                  <h3 className="font-display text-xl text-ink">{b.title}</h3>
-                  <p className="mt-3 text-ink/70 leading-relaxed">{b.body}</p>
+                <div key={i} className="border-t border-bronze pt-6">
+                  <h3 className="font-display text-2xl text-green">{b.title}</h3>
+                  <p className="mt-3 text-green/70 leading-relaxed">{b.body}</p>
                 </div>
               ))}
             </div>
@@ -87,13 +113,16 @@ export default async function ProductPage({ params }: PageProps) {
         product.hardwareBrands ||
         product.profileColors ||
         product.flyscreens) && (
-        <section className="py-20 bg-cream-50 border-y border-rule/60">
+        <section className="py-24 md:py-32 bg-ivory-warm border-y border-rule">
           <Container>
             <div className="grid lg:grid-cols-12 gap-12">
               {product.spec && (
                 <div className="lg:col-span-5">
-                  <span className="eyebrow">Specification</span>
-                  <h2 className="mt-3 font-display text-3xl md:text-4xl text-ink mb-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="block w-8 h-px bg-bronze" />
+                    <span className="eyebrow">Specification</span>
+                  </div>
+                  <h2 className="font-display text-3xl md:text-4xl text-green mb-8">
                     Built to standard.
                   </h2>
                   <SpecTable spec={product.spec} />
@@ -127,16 +156,19 @@ export default async function ProductPage({ params }: PageProps) {
 
       {/* PERFORMANCE + APPLICATIONS */}
       {(product.performance || product.applications) && (
-        <section className="py-20">
-          <Container className="space-y-12">
+        <section className="py-24 md:py-32">
+          <Container className="space-y-16">
             {product.performance && (
               <div>
-                <span className="eyebrow">Performance</span>
-                <ul className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-rule/60 border border-rule/60">
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="block w-8 h-px bg-bronze" />
+                  <span className="eyebrow">Performance</span>
+                </div>
+                <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-rule border border-rule">
                   {product.performance.map((p) => (
                     <li
                       key={p}
-                      className="bg-cream py-6 text-center text-sm text-ink"
+                      className="bg-ivory py-8 text-center text-sm text-green"
                     >
                       {p}
                     </li>
@@ -146,8 +178,11 @@ export default async function ProductPage({ params }: PageProps) {
             )}
             {product.applications && (
               <div>
-                <span className="eyebrow">Applications</span>
-                <p className="mt-4 text-2xl md:text-3xl font-display text-ink/80 leading-snug">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="block w-8 h-px bg-bronze" />
+                  <span className="eyebrow">Applications</span>
+                </div>
+                <p className="text-2xl md:text-3xl font-display text-green/80 leading-snug">
                   {product.applications.join(" · ")}
                 </p>
               </div>
@@ -158,13 +193,13 @@ export default async function ProductPage({ params }: PageProps) {
 
       {/* FREE-FORM SECTIONS */}
       {product.sections && product.sections.length > 0 && (
-        <section className="py-20 border-t border-rule/60">
+        <section className="py-24 border-t border-rule">
           <Container>
             <div className="space-y-16 max-w-3xl">
               {product.sections.map((s, i) => (
                 <div key={i}>
-                  <h2 className="font-display text-3xl text-ink">{s.heading}</h2>
-                  <div className="mt-4 space-y-4 text-ink/75 leading-relaxed">
+                  <h2 className="font-display text-3xl text-green">{s.heading}</h2>
+                  <div className="mt-4 space-y-4 text-green/75 leading-relaxed">
                     {s.body.map((p, j) => (
                       <p key={j}>{p}</p>
                     ))}
@@ -178,23 +213,32 @@ export default async function ProductPage({ params }: PageProps) {
 
       {/* RELATED */}
       {related.length > 0 && (
-        <section className="py-20 bg-cream-50 border-t border-rule/60">
+        <section className="py-24 md:py-32 bg-green text-ivory">
           <Container>
-            <span className="eyebrow">More {product.category}</span>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl text-ink mb-12">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="block w-8 h-px bg-bronze" />
+              <span className="eyebrow capitalize">More {product.category}</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl text-ivory mb-16">
               Explore the range.
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
               {related.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/services/${p.slug}`}
-                  className="group block bg-cream border border-rule/60 p-8 hover:border-ink transition-colors"
+                  className="group block"
                 >
-                  <span className="eyebrow text-muted">
-                    {p.spec?.openingStyle ?? p.spec?.model ?? p.category}
-                  </span>
-                  <h3 className="mt-4 font-display text-xl text-ink group-hover:text-bronze transition-colors">
+                  <Media
+                    src={p.image}
+                    alt={p.imageAlt ?? p.heading}
+                    aspect="aspect-[4/5]"
+                    tone="ivory"
+                    placeholderLabel={`${p.heading} · 4:5`}
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                  <h3 className="mt-5 font-display text-xl text-ivory group-hover:text-bronze-soft transition-colors">
                     {p.heading}
                   </h3>
                 </Link>

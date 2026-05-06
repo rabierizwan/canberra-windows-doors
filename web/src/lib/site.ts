@@ -6,8 +6,42 @@
 export const site = {
   name: "Canberra Windows & Doors",
   shortName: "CW&D",
-  tagline: "Windows and Doors that Define Canberra's Elegance",
+  tagline: "Quietly considered. Sensibly priced.",
   url: "https://canberrawindowsdoors.com.au",
+
+  /** Headline used on the home hero */
+  hero: {
+    eyebrow: "Canberra · Sydney · Established ACT",
+    headline: "Quietly considered. Sensibly priced.",
+    sub:
+      "Premium European-grade aluminium windows and doors, supplied directly to homes across Canberra and Sydney — without the distributor markup.",
+  },
+
+  /** Trust strip numbers */
+  trustStats: [
+    { label: "Years", value: "7" },
+    { label: "Projects", value: "80+" },
+    { label: "Warranty", value: "10 Years" },
+    { label: "Compliant", value: "AS/NZS" },
+  ],
+
+  /** Manifesto section */
+  manifesto: {
+    eyebrow: "Our Promise",
+    headline: "Premium quality, honest pricing.",
+    body: [
+      "For over seven years, we've supplied premium European-grade aluminium windows and doors directly to homes across Canberra and Sydney.",
+      "No distributor markup. No inflated trade-channel pricing. Just considered design, fair value, and a 10-year warranty as standard.",
+    ],
+  },
+
+  /** Service area copy used in section 11 */
+  serviceArea: {
+    eyebrow: "Now Serving",
+    headline: "Canberra · Sydney",
+    body:
+      "Canberra-based supply and installation across the ACT. Australia-wide supply with installation available across all Sydney suburbs on request.",
+  },
 
   contact: {
     phonePrimary: "0423 791 652",
@@ -19,14 +53,15 @@ export const site = {
   },
 
   address: {
-    street: "16 Chaloupka Street",
-    suburb: "Whitlam",
+    street: "66 Thwaites Crescent",
+    suburb: "Wright",
     state: "ACT",
     postcode: "2611",
     country: "Australia",
-    full: "16 Chaloupka Street, Whitlam ACT 2611, Australia",
+    full: "66 Thwaites Crescent, Wright ACT 2611, Australia",
+    // TODO: replace mapsUrl + lat/lng with the real Google Maps Place URL for 66 Thwaites Cres
     mapsUrl:
-      "https://www.google.com/maps/place/16+Chaloupka+St,+Whitlam+ACT+2611,+Australia/",
+      "https://www.google.com/maps/search/?api=1&query=66+Thwaites+Crescent,+Wright+ACT+2611",
     lat: -35.2750692,
     lng: 149.0442552,
   },

@@ -58,4 +58,7 @@ export type Product = {
   sections?: { heading: string; body: string[] }[];
   /** CTA label shown in the hero */
   ctaLabel?: string;
+  /** Cover image (Cloudinary URL). Leave undefined to render branded placeholder. */
+  image?: string;
+  imageAlt?: string;
 };
