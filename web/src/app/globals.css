@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────
+   CW&D Design Tokens
+   ────────────────────────────────────────────────────────────── */
+@theme {
+  /* Brand palette — derived from the CW&D logo */
+  --color-cream-50: #faf7f1;
+  --color-cream: #f5f0e6;
+  --color-cream-200: #ece4d3;
+
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #2a2a2a;
+
+  --color-muted: #8a8478;
+  --color-muted-soft: #b4ada0;
+  --color-rule: #d8d2c4;
+
+  --color-bronze: #8b7355;
+
+  /* Semantic */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-ink);
+
+  /* Typography — Playfair Display (serif, matches logo) + Inter (body) */
+  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Container width */
+  --container-width: 1200px;
+}
+
+/* Base layer */
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display headings use the serif */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Tracked-out subtitle utility (matches the CW&D wordmark style) */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Subtle hairline rule */
+.rule {
+  height: 1px;
+  background: var(--color-rule);
+}

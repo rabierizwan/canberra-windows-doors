@@ -1,0 +1,50 @@
+import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://canberrawindowsdoors.com.au"),
+  title: {
+    default: "Canberra Windows & Doors | Premium Aluminium Windows & Doors in ACT",
+    template: "%s | Canberra Windows & Doors",
+  },
+  description:
+    "Premium aluminium windows and doors in Canberra. Sliding, folding, casement and front doors; awning, hung, sliding, HT102 and thermal break windows. Trusted across the ACT for over a decade.",
+  openGraph: {
+    type: "website",
+    locale: "en_AU",
+    url: "https://canberrawindowsdoors.com.au",
+    siteName: "Canberra Windows & Doors",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html
+      lang="en-AU"
+      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-cream text-ink">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
