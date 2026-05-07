@@ -4,28 +4,28 @@ import { cn } from "@/lib/utils";
 
 type LogoProps = {
   /**
-   * "dark"  → for ivory/light backgrounds (header). Falls back to typographic
-   *           placeholder until a green-on-ivory SVG is supplied at /brand/logo.svg.
-   * "light" → for green/dark backgrounds (footer, dark sections). Uses /brand/logo-white.svg.
+   * "dark"  → for ivory/light backgrounds (header). Monogram rendered as-is.
+   * "light" → for green/dark backgrounds (footer). Monogram is inverted to ivory via CSS.
    */
   variant?: "dark" | "light";
   /** Show the small wordmark + bronze rule below the mark */
   showWordmark?: boolean;
-  /** Rendered width in px; height auto-scales from the SVG aspect ratio */
+  /** Rendered width in px; height auto-scales from the image aspect ratio */
   width?: number;
   className?: string;
 };
 
-const SVG_W = 1668;
-const SVG_H = 943;
+// Source PNG dimensions (3:2 aspect — 1536×1024)
+const SRC_W = 1536;
+const SRC_H = 1024;
 
 export function Logo({
   variant = "dark",
   showWordmark = true,
-  width = 96,
+  width = 88,
   className,
 }: LogoProps) {
-  const height = Math.round((width / SVG_W) * SVG_H);
+  const height = Math.round((width / SRC_W) * SRC_H);
 
   return (
     <Link
@@ -36,35 +36,26 @@ export function Logo({
         className,
       )}
     >
-      {variant === "light" ? (
-        <Image
-          src="/brand/logo-white.svg"
-          alt="CW&D"
-          width={width}
-          height={height}
-          priority
-        />
-      ) : (
-        <span className="font-display text-2xl tracking-tight leading-none text-green">
-          CW<span className="italic">&amp;</span>D
-        </span>
-      )}
+      <Image
+        src="/brand/monogram.png"
+        alt="CW&D"
+        width={width}
+        height={height}
+        priority
+        className={cn(
+          "w-auto select-none",
+          // Footer / dark backgrounds: invert dark monogram → ivory tone.
+          // brightness-0 makes it solid black, then invert flips to white,
+          // which reads as ivory against the deep-green footer.
+          variant === "light" && "brightness-0 invert opacity-90",
+        )}
+        style={{ height: `${height}px` }}
+      />
 
       {showWordmark && (
         <>
-          <span
-            className={cn(
-              "block w-12 h-px",
-              variant === "light" ? "bg-bronze" : "bg-bronze",
-            )}
-            aria-hidden
-          />
-          <span
-            className={cn(
-              "eyebrow text-[0.6rem]",
-              variant === "light" ? "text-bronze" : "text-bronze",
-            )}
-          >
+          <span className="block w-12 h-px bg-bronze" aria-hidden />
+          <span className="eyebrow text-[0.6rem] text-bronze">
             Canberra Windows &amp; Doors
           </span>
         </>

@@ -23,7 +23,7 @@ export const commercialResidentialWindow: Product = {
       title: "Enhanced Security Features",
       body: "Advanced locking systems and shatter-resistant glass for peace of mind.",
     },
-  ],
+  ], 
   sections: [
     {
       heading: "Industry Applications",
