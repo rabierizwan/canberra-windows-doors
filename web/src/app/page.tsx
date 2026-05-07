@@ -18,7 +18,7 @@ export default function HomePage() {
   return (
     <>
       {/* 02 — Hero */}
-      <Hero />
+      <Hero image="https://res.cloudinary.com/drlrwvdta/image/upload/v1778122363/CW_D-hero_t370mt.png" />
 
       {/* 03 — Trust strip */}
       <TrustStrip />
