@@ -25,8 +25,18 @@ function NavDropdown({
   items: readonly NavItem[];
   cols?: 1 | 2;
 }) {
+  // Split items into roughly equal columns for the 2-col layout.
+  const half = Math.ceil(items.length / 2);
+  const left = cols === 2 ? items.slice(0, half) : items;
+  const right = cols === 2 ? items.slice(half) : [];
+
+  // Each column needs to be wide enough to fit the longest label without wrapping.
+  const colWidth = "min-w-[180px]";
+
   return (
-    <div className="group/dropdown relative">
+    // inline-flex + items-center matches the box model of the plain <Link>
+    // siblings (About/Contact) so all four nav items sit on the same baseline.
+    <div className="group/dropdown relative inline-flex items-center">
       <Link
         href={href}
         className="eyebrow eyebrow-muted hover:text-bronze group-hover/dropdown:text-bronze group-focus-within/dropdown:text-bronze transition-colors"
@@ -47,7 +57,7 @@ function NavDropdown({
       >
         <div
           className={cn(
-            "bg-ivory border border-rule p-7",
+            "bg-ivory border border-rule p-7 w-max",
             "shadow-[0_24px_60px_-15px_rgba(20,31,24,0.18)]",
           )}
         >
@@ -55,23 +65,38 @@ function NavDropdown({
             <span className="block w-6 h-px bg-bronze" />
             <span className="eyebrow">{label}</span>
           </div>
-          <ul
-            className={cn(
-              "grid gap-x-10 gap-y-3 whitespace-nowrap",
-              cols === 2 ? "grid-cols-2" : "grid-cols-1 min-w-[200px]",
+
+          {/* Use flex with explicit column widths — far more reliable than grid
+              + whitespace-nowrap, which let cells overflow the parent. */}
+          <div className="flex gap-12">
+            <ul className={cn("space-y-3", colWidth)}>
+              {left.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="block font-display text-base text-green hover:text-bronze transition-colors whitespace-nowrap"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            {right.length > 0 && (
+              <ul className={cn("space-y-3", colWidth)}>
+                {right.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="block font-display text-base text-green hover:text-bronze transition-colors whitespace-nowrap"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             )}
-          >
-            {items.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block font-display text-base text-green hover:text-bronze transition-colors"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          </div>
+
           <div className="mt-6 pt-4 border-t border-rule">
             <Link
               href={href}
