@@ -3,6 +3,88 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 import { site } from "@/lib/site";
+import { cn } from "@/lib/utils";
+
+type NavItem = { label: string; href: string };
+
+/**
+ * Hover/focus-triggered dropdown panel for nav items that have sub-links.
+ * Uses CSS-only group hover + focus-within so this stays a server component.
+ *
+ * The `pt-5` on the panel wrapper creates an invisible bridge between the
+ * parent label and the panel — keeps the panel open as the cursor crosses.
+ */
+function NavDropdown({
+  label,
+  href,
+  items,
+  cols = 1,
+}: {
+  label: string;
+  href: string;
+  items: readonly NavItem[];
+  cols?: 1 | 2;
+}) {
+  return (
+    <div className="group/dropdown relative">
+      <Link
+        href={href}
+        className="eyebrow eyebrow-muted hover:text-bronze group-hover/dropdown:text-bronze group-focus-within/dropdown:text-bronze transition-colors"
+      >
+        {label}
+      </Link>
+
+      <div
+        className={cn(
+          // Position + invisible bridge above the panel
+          "absolute top-full left-1/2 -translate-x-1/2 pt-5 z-50",
+          // Hidden by default, revealed on hover/focus of the group
+          "invisible opacity-0 translate-y-1",
+          "group-hover/dropdown:visible group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0",
+          "group-focus-within/dropdown:visible group-focus-within/dropdown:opacity-100 group-focus-within/dropdown:translate-y-0",
+          "transition-all duration-200 ease-out",
+        )}
+      >
+        <div
+          className={cn(
+            "bg-ivory border border-rule p-7",
+            "shadow-[0_24px_60px_-15px_rgba(20,31,24,0.18)]",
+          )}
+        >
+          <div className="flex items-center gap-3 mb-5">
+            <span className="block w-6 h-px bg-bronze" />
+            <span className="eyebrow">{label}</span>
+          </div>
+          <ul
+            className={cn(
+              "grid gap-x-10 gap-y-3 whitespace-nowrap",
+              cols === 2 ? "grid-cols-2" : "grid-cols-1 min-w-[200px]",
+            )}
+          >
+            {items.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block font-display text-base text-green hover:text-bronze transition-colors"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6 pt-4 border-t border-rule">
+            <Link
+              href={href}
+              className="eyebrow text-green hover:text-bronze transition-colors inline-flex items-center gap-2"
+            >
+              View all <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 /**
  * Sticky header on ivory. Phone number always visible (trades customers call).
@@ -15,15 +97,30 @@ export function Header() {
         <Logo showWordmark={false} />
 
         <nav aria-label="Primary" className="hidden md:flex items-center gap-10">
-          {site.nav.primary.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="eyebrow eyebrow-muted hover:text-bronze transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+          <NavDropdown
+            label="Doors"
+            href="/services/sliding-door"
+            items={site.nav.doors}
+            cols={1}
+          />
+          <NavDropdown
+            label="Windows"
+            href="/services/ht102"
+            items={site.nav.windows}
+            cols={2}
+          />
+          <Link
+            href="/about-us"
+            className="eyebrow eyebrow-muted hover:text-bronze transition-colors"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="eyebrow eyebrow-muted hover:text-bronze transition-colors"
+          >
+            Contact
+          </Link>
         </nav>
 
         <div className="flex items-center gap-6">
