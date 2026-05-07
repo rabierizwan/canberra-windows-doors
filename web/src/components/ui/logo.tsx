@@ -27,12 +27,17 @@ export function Logo({
 }: LogoProps) {
   const height = Math.round((width / SRC_W) * SRC_H);
 
+  // The PNG has ~25% transparent padding above and below the artwork.
+  // Negative margins pull the rule + wordmark up so they sit visually
+  // tight against the bottom of the "CW&D" mark, regardless of file padding.
+  const pullUp = -Math.round(height * 0.22);
+
   return (
     <Link
       href="/"
       aria-label="Canberra Windows & Doors — home"
       className={cn(
-        "inline-flex flex-col items-center gap-2 hover:opacity-80 transition-opacity",
+        "inline-flex flex-col items-center hover:opacity-80 transition-opacity",
         className,
       )}
     >
@@ -45,8 +50,6 @@ export function Logo({
         className={cn(
           "w-auto select-none",
           // Footer / dark backgrounds: invert dark monogram → ivory tone.
-          // brightness-0 makes it solid black, then invert flips to white,
-          // which reads as ivory against the deep-green footer.
           variant === "light" && "brightness-0 invert opacity-90",
         )}
         style={{ height: `${height}px` }}
@@ -54,8 +57,12 @@ export function Logo({
 
       {showWordmark && (
         <>
-          <span className="block w-12 h-px bg-bronze" aria-hidden />
-          <span className="eyebrow text-[0.6rem] text-bronze">
+          <span
+            className="block w-10 h-px bg-bronze"
+            style={{ marginTop: `${pullUp}px` }}
+            aria-hidden
+          />
+          <span className="mt-3 eyebrow text-[0.6rem] text-bronze">
             Canberra Windows &amp; Doors
           </span>
         </>
