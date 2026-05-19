@@ -58,9 +58,19 @@ export type Product = {
   sections?: { heading: string; body: string[] }[];
   /** CTA label shown in the hero */
   ctaLabel?: string;
-  /** Cover image (Cloudinary URL). Leave undefined to render branded placeholder. */
+  /**
+   * Cover image (Cloudinary URL) — used on cards, hero and related lists.
+   * Derived automatically from `images[0]` by the registry; leave undefined
+   * to render a branded placeholder.
+   */
   image?: string;
   imageAlt?: string;
+  /**
+   * Full ordered image set for this product (Cloudinary URLs). Index 0 is
+   * the cover. Assigned from `productImages` in src/lib/images.ts.
+   * Ready to power a product image gallery on the detail page.
+   */
+  images?: string[];
   /**
    * When true, the page still builds + is reachable by URL, but the product
    * is excluded from category grids, nav menus and "related" lists.

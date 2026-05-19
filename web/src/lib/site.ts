@@ -42,7 +42,7 @@ export const site = {
     headline: "Canberra · Sydney",
     body: [
       "Canberra-based supply and installation across the ACT. Australia-wide supply, with installation available across all Sydney suburbs on request.",
-      "Every installation we complete is backed by ongoing aftercare — adjustments, weather-seal replacements and hardware tune-ups. We service the windows and doors we've fitted ourselves.",
+      "After every installation, our team stays available for ongoing aftercare — adjustments, weather-seal replacements and hardware tune-ups whenever you need them. We service the windows and doors we've fitted ourselves.",
     ],
   },
 

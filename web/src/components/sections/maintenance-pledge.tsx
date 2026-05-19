@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/container";
 
 /**
  * "We stand behind our work" — used on /doors and /windows index pages.
- * Reinforces that maintenance is part of the package on every install
+ * Reinforces that aftercare is available on every install
  * (and implicitly: only on installs we completed ourselves).
  */
 export function MaintenancePledge() {
@@ -22,9 +22,9 @@ export function MaintenancePledge() {
           <div className="md:col-span-6 md:col-start-7 space-y-5 text-ivory/75 leading-relaxed">
             <p>
               When CW&amp;D supplies <em>and</em> installs your windows or doors,
-              ongoing maintenance is part of the package — adjustments,
-              weather-seal replacements and hardware tune-ups, performed by
-              the same team who fitted them.
+              the same team stays available for the life of the product — on
+              hand for adjustments, weather-seal replacements and hardware
+              tune-ups whenever you need them.
             </p>
             <p>
               We service the windows and doors we&apos;ve fitted ourselves, so

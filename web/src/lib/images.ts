@@ -33,6 +33,39 @@ export const galleryImages = [
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086182/cwd-edited-011_z0gkj8.png",
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086220/cwd-edited-012_d5cnzl.png",
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086180/cwd-edited-013_rcgz3m.png",
+  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779188584/CW_D_AW_xbdxni.png",
 ] as const;
 
 export type GalleryImage = (typeof galleryImages)[number];
+
+/**
+ * Per-product image sets — keyed by product slug.
+ *
+ * Each value is an ordered array of Cloudinary URLs:
+ *   • index 0 is the COVER image (used on cards, hero, related lists)
+ *   • the remaining entries are extra shots, ready to power a product
+ *     image gallery on the detail page
+ *
+ * To assign photography to a product, just paste its Cloudinary URLs into
+ * the array below. The registry (src/data/products/index.ts) reads from
+ * here automatically — no other file needs editing.
+ *
+ * Current arrays are seeded with one image each from `galleryImages`;
+ * replace / extend them with real product photography as it's uploaded.
+ */
+export const productImages: Record<string, string[]> = {
+  // ── Doors ──
+  "sliding-door": [galleryImages[0]],
+  "folding-door": [galleryImages[1]],
+  "glazed-door": [galleryImages[2]],
+
+  // ── Windows ──
+  "awning-window": [galleryImages[13], galleryImages[3]],
+  "sliding-windows-canberra": [galleryImages[7]],
+  "casement-window": [galleryImages[6]],
+  "hung-windows": [galleryImages[5]],
+
+  // ── Non-product pages ──
+  "thermal-break-window": [galleryImages[10]],
+  "alfresco-window": [galleryImages[9]],
+};

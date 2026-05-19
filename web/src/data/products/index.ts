@@ -2,7 +2,7 @@
  * Single registry of every product. Add a new product by:
  *   1. Creating its data file in this folder
  *   2. Importing + adding it to RAW_PRODUCTS below
- *   3. Adding a slug → gallery index entry in PRODUCT_IMAGE_INDEX
+ *   3. Adding a slug → URL array entry in `productImages` (src/lib/images.ts)
  *   4. (Optionally) adding a nav entry in src/lib/site.ts
  *
  * `excludeFromIndex` products (Thermal Break, Alfresco) still build + are
@@ -10,7 +10,7 @@
  */
 
 import type { Product, ProductCategory } from "@/types/product";
-import { galleryImages } from "@/lib/images";
+import { productImages } from "@/lib/images";
 
 // Doors
 import { slidingDoor } from "./sliding-door";
@@ -44,32 +44,19 @@ const RAW_PRODUCTS: Product[] = [
 ];
 
 /**
- * Maps each product slug → an index in `galleryImages` (src/lib/images.ts).
- *
- * NOTE: the gallery files are named generically (cwd-edited-001 … 013), so
- * this mapping is a best-effort guess. To re-pair a product with a different
- * photo, just change its index here. Index 11 is reserved for the featured
- * project (see featured-project.ts).
+ * Final product list with imagery applied from `productImages`
+ * (src/lib/images.ts). Each product receives:
+ *   • `images` — the full ordered URL array for that slug
+ *   • `image`  — the cover, derived from `images[0]`
+ * A product data file may still hard-code its own `image` / `images`,
+ * which takes precedence over the central assignment.
  */
-const PRODUCT_IMAGE_INDEX: Record<string, number> = {
-  "sliding-door": 0,
-  "folding-door": 1,
-  "glazed-door": 2,
-  "awning-window": 3,
-  "sliding-windows-canberra": 7,
-  "casement-window": 6,
-  "hung-windows": 5,
-  "thermal-break-window": 10,
-  "alfresco-window": 9,
-};
-
-/** Final product list with gallery imagery applied. */
 export const PRODUCTS: Product[] = RAW_PRODUCTS.map((p) => {
-  const idx = PRODUCT_IMAGE_INDEX[p.slug];
-  if (idx === undefined || !galleryImages[idx]) return p;
+  const imgs = p.images ?? productImages[p.slug] ?? [];
   return {
     ...p,
-    image: p.image ?? galleryImages[idx],
+    images: imgs,
+    image: p.image ?? imgs[0],
     imageAlt:
       p.imageAlt ?? `${p.heading} — supplied by Canberra Windows & Doors`,
   };
