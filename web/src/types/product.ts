@@ -61,4 +61,11 @@ export type Product = {
   /** Cover image (Cloudinary URL). Leave undefined to render branded placeholder. */
   image?: string;
   imageAlt?: string;
+  /**
+   * When true, the page still builds + is reachable by URL, but the product
+   * is excluded from category grids, nav menus and "related" lists.
+   * Used for pages that aren't sibling products — e.g. the Thermal-Broken
+   * series explainer and the Alfresco glazing service.
+   */
+  excludeFromIndex?: boolean;
 };

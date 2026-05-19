@@ -9,16 +9,17 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { TwoCities } from "@/components/sections/two-cities";
 import { FinalCta } from "@/components/sections/final-cta";
 import { getProductBySlug, getProductsByCategory } from "@/data/products";
+import { heroImage } from "@/lib/images";
 
 export default function HomePage() {
   const doors = getProductsByCategory("doors");
   const windows = getProductsByCategory("windows");
-  const flagship = getProductBySlug("ht102")!;
+  const flagship = getProductBySlug("awning-window")!;
 
   return (
     <>
       {/* 02 — Hero */}
-      <Hero image="https://res.cloudinary.com/drlrwvdta/image/upload/f_auto,q_auto/v1778122363/CW_D-hero_t370mt.png" />
+      <Hero image={heroImage} />
 
       {/* 03 — Trust strip */}
       <TrustStrip />
@@ -37,7 +38,7 @@ export default function HomePage() {
         products={doors}
         tone="ivory"
         cols={4}
-        viewAllHref="/services/sliding-door"
+        viewAllHref="/doors"
       />
 
       {/* 07 — Windows collection */}
@@ -47,7 +48,7 @@ export default function HomePage() {
         products={windows}
         tone="green"
         cols={4}
-        viewAllHref="/services/ht102"
+        viewAllHref="/windows"
       />
 
       {/* 08 — Featured project */}

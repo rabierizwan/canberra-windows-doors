@@ -42,6 +42,12 @@ export default function AboutPage() {
               flair to your front entry or seal out those chilly Canberra winds,
               we&apos;ve got the right product, fairly priced.
             </p>
+            <p>
+              And where we install, we maintain. Every CW&amp;D installation is
+              backed by ongoing aftercare from the same team that fitted it —
+              so the windows and doors you choose today are still performing
+              in five, ten, fifteen years.
+            </p>
           </div>
         </Container>
       </section>

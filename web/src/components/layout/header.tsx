@@ -20,6 +20,8 @@ const MONOGRAM_BASE_HEIGHT = Math.round(
 // and proportional to the surrounding nav text.
 const SCROLLED_SCALE = 0.75;
 
+
+
 type NavItem = { label: string; href: string };
 
 /**
@@ -132,11 +134,29 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    // const onScroll = () => setScrolled(window.scrollY > 12);
+    // onScroll();
+    // window.addEventListener("scroll", onScroll, { passive: true });
+    // return () => window.removeEventListener("scroll", onScroll);
+
+    const COLLAPSE_AT = 80; 
+    const EXPAND_AT = 20;
+
+    const onScroll = () => {
+      setScrolled((prev) => {
+        if (!prev && window.scrollY > COLLAPSE_AT) return true;
+        if (prev && window.scrollY < EXPAND_AT) return false;
+        return prev; // inside the dead Zone - hold the previous state
+      });
+    };
+
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, {passive: true});
     return () => window.removeEventListener("scroll", onScroll);
+
   }, []);
+
+
 
   return (
     <header className="sticky top-0 z-50">
@@ -150,9 +170,12 @@ export function Header() {
         )}
       >
         <Container className="h-9 flex items-center justify-between text-[0.62rem] tracking-[0.22em] uppercase font-medium">
-          <span className="inline-flex items-center gap-3 text-ivory/85">
+          {/* <span className="inline-flex items-center gap-3 text-ivory/85">
             <span className="block w-1 h-1 rounded-full bg-bronze" aria-hidden />
             Canberra <span className="text-ivory/30">·</span> Sydney
+          </span> */}
+          <span className="hidden md:inline-block text-ivory/60">
+            Sat – Sun · By Appointment
           </span>
           <a
             href={site.contact.phonePrimaryHref}
@@ -185,15 +208,15 @@ export function Header() {
           >
             <NavDropdown
               label="Doors"
-              href="/services/sliding-door"
+              href="/doors"
               items={site.nav.doors}
               cols={1}
             />
             <NavDropdown
               label="Windows"
-              href="/services/ht102"
+              href="/windows"
               items={site.nav.windows}
-              cols={2}
+              cols={1}
             />
           </nav>
 
@@ -249,7 +272,7 @@ export function Header() {
           {/* ── RIGHT NAV ── */}
           <nav
             aria-label="Site navigation"
-            className="hidden md:flex items-center justify-end gap-8"
+            className="hidden md:flex items-center justify-end gap-10"
           >
             <Link
               href="/about-us"
@@ -263,17 +286,17 @@ export function Header() {
             >
               Contact
             </Link>
-            <Button href="/request-a-quote" variant="primary" size="sm">
+            {/* <Button href="/request-a-quote" variant="primary" size="sm">
               Request a Quote
-            </Button>
+            </Button> */}
           </nav>
 
           {/* ── MOBILE: Quote-only on small screens (full nav drawer is Phase 1) ── */}
-          <div className="md:hidden col-start-3 justify-self-end">
+          {/* <div className="md:hidden col-start-3 justify-self-end">
             <Button href="/request-a-quote" variant="primary" size="sm">
               Quote
             </Button>
-          </div>
+          </div> */}
         </Container>
       </div>
     </header>

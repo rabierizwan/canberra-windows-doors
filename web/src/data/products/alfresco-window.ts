@@ -3,6 +3,9 @@ import type { Product } from "@/types/product";
 export const alfrescoWindow: Product = {
   slug: "alfresco-window",
   category: "windows",
+  // Not a product — this is a glazing *service* (patio/sunroom conversions).
+  // Reachable by link, kept out of product grids + nav.
+  excludeFromIndex: true,
   heading: "Alfresco Window",
   subheading: "Custom alfresco and sunroom glazing solutions",
   metaTitle: "Alfresco Window for Outdoor Living | Sunroom Glazing ACT",

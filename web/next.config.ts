@@ -14,6 +14,23 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  // 301-style permanent redirects (308) preserving SEO from the product
+  // restructure — old product URLs → their merged / renamed destinations.
+  async redirects() {
+    return [
+      // Awning cluster merged → /services/awning-window
+      { source: "/services/ht102", destination: "/services/awning-window", permanent: true },
+      { source: "/services/ht76-awning-window", destination: "/services/awning-window", permanent: true },
+      { source: "/services/80-series-awning-window", destination: "/services/awning-window", permanent: true },
+      // Casement Door renamed → Glazed Door
+      { source: "/services/casement-door", destination: "/services/glazed-door", permanent: true },
+      // Commercial Residential removed → windows index
+      { source: "/services/commercial-residential-window", destination: "/windows", permanent: true },
+      // Front Door removed earlier → doors index
+      { source: "/services/front-door", destination: "/doors", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

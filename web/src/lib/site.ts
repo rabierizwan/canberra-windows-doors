@@ -32,6 +32,7 @@ export const site = {
     body: [
       "For over seven years, we've supplied premium European-grade aluminium windows and doors directly to homes across Canberra and Sydney.",
       "No distributor markup. No inflated trade-channel pricing. Just considered design, fair value, and a 10-year warranty as standard.",
+      "And when we install, we maintain — the windows and doors we fit are still performing in five, ten, fifteen years, looked after by the same team that put them in.",
     ],
   },
 
@@ -39,8 +40,10 @@ export const site = {
   serviceArea: {
     eyebrow: "Now Serving",
     headline: "Canberra · Sydney",
-    body:
-      "Canberra-based supply and installation across the ACT. Australia-wide supply with installation available across all Sydney suburbs on request.",
+    body: [
+      "Canberra-based supply and installation across the ACT. Australia-wide supply, with installation available across all Sydney suburbs on request.",
+      "Every installation we complete is backed by ongoing aftercare — adjustments, weather-seal replacements and hardware tune-ups. We service the windows and doors we've fitted ourselves.",
+    ],
   },
 
   contact: {
@@ -81,26 +84,21 @@ export const site = {
 
   nav: {
     primary: [
-      { label: "Doors", href: "/services/sliding-door", group: "doors" },
-      { label: "Windows", href: "/services/ht102", group: "windows" },
+      { label: "Doors", href: "/doors", group: "doors" },
+      { label: "Windows", href: "/windows", group: "windows" },
       { label: "About", href: "/about-us" },
       { label: "Contact", href: "/contact" },
     ],
     doors: [
       { label: "Sliding Door", href: "/services/sliding-door" },
       { label: "Folding Door", href: "/services/folding-door" },
-      { label: "Casement Door", href: "/services/casement-door" },
-      { label: "Front Door", href: "/services/front-door" },
+      { label: "Glazed Door", href: "/services/glazed-door" },
     ],
     windows: [
-      { label: "HT102", href: "/services/ht102" },
-      { label: "Awning Window", href: "/services/ht76-awning-window" },
-      { label: "Hung Window", href: "/services/hung-windows" },
-      { label: "Casement Window", href: "/services/casement-window" },
+      { label: "Awning Window", href: "/services/awning-window" },
       { label: "Sliding Window", href: "/services/sliding-windows-canberra" },
-      { label: "Commercial Residential", href: "/services/commercial-residential-window" },
-      { label: "Alfresco Window", href: "/services/alfresco-window" },
-      { label: "Thermal Break Window", href: "/services/thermal-break-window" },
+      { label: "Casement Window", href: "/services/casement-window" },
+      { label: "Hung Window", href: "/services/hung-windows" },
     ],
   },
 } as const;
