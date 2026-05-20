@@ -44,7 +44,7 @@ export const thermalBreakWindow: Product = {
     glassStandard: "AS/NZS 2208",
     extrusionProfile: "6063-T5 Aluminium with reinforced polyamide thermal break",
     standardHardware: "SIEGENIA (DE) / Roto (DE)",
-    warranty: "10 Years",
+    // warranty: "10 Years",
   },
   glassTypes: ["Double-glazed", "Triple-glazed", "LOW-E", "Acoustic", "Solar control"],
   glassColors: ["Clear", "Grey", "Blue", "Green", "Custom"],

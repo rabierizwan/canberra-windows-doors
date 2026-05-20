@@ -37,7 +37,7 @@ export const casementWindow: Product = {
     glassStandard: "AS/NZS 2208",
     extrusionProfile: "6063-T5 Aluminium",
     standardHardware: "SIEGENIA (DE) / Other",
-    warranty: "10 Years",
+    // warranty: "10 Years",
   },
   glassTypes: ["Tempered", "Toughened", "Coated", "LOW-E", "Ordinary flat glass"],
   glassColors: ["Clear", "Grey", "Blue", "Green", "Custom"],

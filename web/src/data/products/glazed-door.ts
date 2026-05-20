@@ -40,7 +40,7 @@ export const glazedDoor: Product = {
     glassStandard: "AS/NZS 2208",
     extrusionProfile: "6063-T5 Aluminium (100 Series: thermally broken)",
     standardHardware: "SIEGENIA (DE) / Other",
-    warranty: "10 Years",
+    // warranty: "10 Years",
   },
   glassTypes: ["Double Tempered", "Toughened", "Coated", "LOW-E"],
   glassColors: ["Clear", "Grey", "Blue", "Green", "Custom"],
