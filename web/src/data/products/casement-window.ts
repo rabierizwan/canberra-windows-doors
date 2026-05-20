@@ -20,8 +20,8 @@ export const casementWindow: Product = {
       body: "When opened, casement windows create a clear line of sight to the outdoors.",
     },
     {
-      title: "Energy Efficiency",
-      body: "Crafted with high-quality materials for excellent insulation, helping to reduce energy costs.",
+      title: "Tightest Seal of Any Openable",
+      body: "Cam-lock hardware pulls the sash hard against continuous EPDM gaskets — casements are the most airtight openable window format.",
     },
     {
       title: "Security Features",

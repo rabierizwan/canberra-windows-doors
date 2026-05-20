@@ -13,16 +13,16 @@ export const slidingDoor: Product = {
   ],
   benefits: [
     {
-      title: "Superior Insulation",
-      body: "Exceptional insulation with high-quality materials minimising energy loss for year-round comfort.",
+      title: "Seamless Indoor–Outdoor Flow",
+      body: "Wide glazed panels glide aside to merge living spaces with patios and decks — no swing arc, no lost floor space.",
     },
     {
-      title: "Enhanced Security",
-      body: "Robust locking mechanisms and security features that prioritise safety while maintaining style.",
+      title: "Maximum Natural Light",
+      body: "Slim 75mm sightlines and large glass apertures pull daylight deep into the room.",
     },
     {
-      title: "Customisable Options",
-      body: "Available in multiple finishes, colours and sizes to match home aesthetics — glass or aluminium options available.",
+      title: "Multi-Point Locking",
+      body: "Robust SIEGENIA / Doric hardware with anti-lift catches — sliding doors made secure by engineering, not by accident.",
     },
   ],
   spec: {

@@ -63,7 +63,7 @@ export type GalleryImage = (typeof galleryImages)[number];
 export const cadImages = {
   awningWindow: [
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779244055/AW-cad_mwpvtq.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779245294/AW-cad-collection_iymejo.png",
+    //"https://res.cloudinary.com/drlrwvdta/image/upload/v1779245294/AW-cad-collection_iymejo.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255959/AW-cad2_gqmzo4.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255957/AW-cad3_wykswp.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255957/AW-cad4_rcmjcz.png",
@@ -142,14 +142,19 @@ export const productImages: Record<string, string[]> = {
     cadImages.slidingWindow[0],
     cadImages.slidingWindow[1],
     cadImages.slidingWindow[2],
+    cadImages.slidingWindow[3],
   ],
   "casement-window": [
     galleryImages[15], // CW_D_CW (lead shot)
     galleryImages[6], // project photo
+    cadImages.casementWindow[0],
+    cadImages.casementWindow[1],
   ],
   "hung-windows": [
     galleryImages[16], // CW_D_HW (lead shot)
     galleryImages[5], // project photo
+    cadImages.hungWindow[0],
+    cadImages.hungWindow[1],
   ],
 
   // ── Non-product pages ──

@@ -17,6 +17,20 @@ export const glazedDoor: Product = {
     "A glazed door is hinged on one side and swings open, pairing a full glass panel with a slim aluminium frame. It brings natural light deep into a space while keeping a sleek, modern sightline.",
     "We supply glazed doors in two frame systems — the 80 Series standard aluminium frame and the 100 thermal-broken series — across residential and commercial properties in Canberra and Sydney.",
   ],
+  benefits: [
+    {
+      title: "Light Without Compromise",
+      body: "A full glass panel in a slim aluminium frame — natural light reaches deep into the room.",
+    },
+    {
+      title: "Two Series, Real Difference",
+      body: "80 Series for value, 100 thermal-broken when energy performance matters most.",
+    },
+    {
+      title: "Secure as Standard",
+      body: "Multi-point locking via SIEGENIA / Roto hardware on every glazed door we supply.",
+    },
+  ],
   spec: {
     model: "80 Series · 100 Series",
     openingStyle: "Hinged (swing)",

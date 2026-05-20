@@ -12,20 +12,16 @@ export const hungWindows: Product = {
   ],
   benefits: [
     {
-      title: "Easy Operation",
-      body: "Smooth vertical sliding design for practical daily use.",
+      title: "Classical Sightline",
+      body: "Vertical sashes give a timeless, heritage-appropriate look that suits traditional Canberra homes and modern reinterpretations alike.",
     },
     {
-      title: "Customisable Designs",
-      body: "Various finishes and styles to complement your home decor.",
+      title: "No Projection, No Swing",
+      body: "Sashes slide vertically — nothing swings into the room, nothing reaches out into pathways or balconies.",
     },
     {
-      title: "Low Maintenance",
-      body: "Durable construction requiring minimal upkeep over time.",
-    },
-    {
-      title: "Enhanced Security",
-      body: "Advanced locking mechanisms and sturdy materials.",
+      title: "Adjustable Airflow",
+      body: "On double-hung units, opening both top and bottom sashes pulls warm air out high and draws fresh air in low.",
     },
   ],
   spec: {
@@ -55,7 +51,6 @@ export const hungWindows: Product = {
     {
       heading: "Custom Installation Options",
       body: [
-        "Materials available in aluminium, timber or uPVC.",
         "Customisation includes double-glazed glass for insulation, acoustic-rated glass for soundproofing, UV-blocking coatings, and flyscreen and lock upgrades.",
       ],
     },

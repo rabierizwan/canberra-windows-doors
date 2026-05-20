@@ -14,16 +14,16 @@ export const slidingWindowsCanberra: Product = {
   ],
   benefits: [
     {
-      title: "Aluminium Construction",
-      body: "Built to withstand the elements — long-lasting performance with minimal maintenance.",
+      title: "Double-Glazed as Standard",
+      body: "A 5+12A+5 insulating glass unit dampens noise and steadies indoor temperature — included in every unit, not an upgrade.",
     },
     {
-      title: "Double Glazed Options",
-      body: "Superior insulation and energy efficiency for year-round comfort, reduced noise and lower energy bills.",
+      title: "Wide Aperture, Sleek Sightline",
+      body: "Up to 50% of the opening clears for ventilation, with thin 102mm frames keeping the view open.",
     },
     {
-      title: "Smooth Operation",
-      body: "Glide open and closed with ease — sleek design allows for maximum light and unobstructed views.",
+      title: "Smooth Glide, Quiet Close",
+      body: "Premium roller tracks and continuous seals — opens with one hand, closes flush against EPDM gaskets.",
     },
   ],
   spec: {

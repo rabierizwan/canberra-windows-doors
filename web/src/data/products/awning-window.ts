@@ -16,7 +16,7 @@ export const awningWindow: Product = {
     "Aluminium awning windows — top-hung sashes that ventilate in any weather. Available in the 80 standard series or the 100 thermal-broken series for NCC 7-star performance.",
   intro: [
     "An awning window is top-hung and opens outward from the base, drawing fresh air through even in light rain. A smooth hand-crank winder gives precise control over the opening — ideal for kitchens, bathrooms and high or hard-to-reach windows.",
-    "We supply awning windows in two frame systems: the 80 Series standard aluminium frame, and the 100 thermal-broken series engineered for the highest energy performance. Both are double-glazed as standard and can be combined with fixed lights for larger openings.",
+    //"Available in the 80 Series standard frame or the 100 thermal-broken series. Double-glazed as standard.",
   ],
   benefits: [
     {

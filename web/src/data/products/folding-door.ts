@@ -12,6 +12,20 @@ export const foldingDoor: Product = {
     "Folding doors are a fantastic addition to any home, adding personality and charm while offering remarkable flexibility in space management.",
     "We supply premium folding doors designed to enhance residential and commercial spaces by opening patios and sunrooms to create expansive areas with natural light and airflow.",
   ],
+  benefits: [
+    {
+      title: "Open the Whole Wall",
+      body: "Panels stack neatly to one side, clearing up to 90% of the opening for true indoor–outdoor living.",
+    },
+    {
+      title: "Flexible Daily Use",
+      body: "One leaf acts as a single passage door for everyday traffic; unfold the rest for entertaining.",
+    },
+    {
+      title: "Configurable Panels",
+      body: "Two-, three-, four-leaf and beyond — sized to your opening, hinged left, right or split.",
+    },
+  ],
   spec: {
     model: "HT75",
     openingStyle: "Folding",
