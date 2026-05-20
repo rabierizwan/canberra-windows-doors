@@ -3,6 +3,7 @@ import type { Product } from "@/types/product";
 export const slidingWindowsCanberra: Product = {
   slug: "sliding-windows-canberra",
   category: "windows",
+  drawingType: "SW",
   heading: "Sliding Window",
   metaTitle: "Sliding Windows in Canberra | ACT Aluminium Windows",
   metaDescription:

@@ -8,6 +8,7 @@ import type { Product } from "@/types/product";
 export const awningWindow: Product = {
   slug: "awning-window",
   category: "windows",
+  drawingType: "AW",
   heading: "Awning Window",
   subheading: "Top-hung ventilation — 80 standard or 100 thermal-broken",
   metaTitle: "Awning Windows in Canberra & Sydney | 80 & 100 Series",

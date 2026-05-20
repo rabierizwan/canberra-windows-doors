@@ -3,6 +3,7 @@ import type { Product } from "@/types/product";
 export const slidingDoor: Product = {
   slug: "sliding-door",
   category: "doors",
+  drawingType: "SD",
   heading: "Sliding Door",
   metaTitle: "Sliding Door | High Quality Sliding Doors in Canberra",
   metaDescription:

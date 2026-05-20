@@ -7,6 +7,7 @@ import type { Product } from "@/types/product";
 export const glazedDoor: Product = {
   slug: "glazed-door",
   category: "doors",
+  drawingType: "GD",
   heading: "Glazed Door",
   subheading: "Hinged, fully glazed — 80 standard or 100 thermal-broken",
   metaTitle: "Glazed Doors in Canberra & Sydney | Hinged Aluminium Doors",

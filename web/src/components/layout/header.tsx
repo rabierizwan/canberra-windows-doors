@@ -139,7 +139,7 @@ export function Header() {
     // window.addEventListener("scroll", onScroll, { passive: true });
     // return () => window.removeEventListener("scroll", onScroll);
 
-    const COLLAPSE_AT = 80; 
+    const COLLAPSE_AT = 140; 
     const EXPAND_AT = 20;
 
     const onScroll = () => {
@@ -197,7 +197,7 @@ export function Header() {
         className={cn(
           "bg-ivory/90 backdrop-blur-md border-b border-rule",
           "transition-[padding] duration-300 ease-out motion-reduce:transition-none",
-          scrolled ? "py-3" : "pt-5 pb-12",
+          scrolled ? "py-1" : "pt-5 pb-12",
         )}
       >
         <Container as="div" className="grid grid-cols-3 items-center">

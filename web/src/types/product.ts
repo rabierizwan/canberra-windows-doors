@@ -78,4 +78,13 @@ export type Product = {
    * series explainer and the Alfresco glazing service.
    */
   excludeFromIndex?: boolean;
+  /**
+   * If set, the matching pair of technical drawings (80 + 100 series) from
+   * lib/documents.ts will be rendered on the product page.
+   *   AW → Awning Window
+   *   GD → Glazed Door
+   *   SD → Sliding Door
+   *   SW → Sliding Window
+   */
+  drawingType?: "AW" | "GD" | "SD" | "SW";
 };

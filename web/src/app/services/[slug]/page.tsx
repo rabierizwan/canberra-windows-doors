@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Media } from "@/components/ui/media";
+import { ImageSlider } from "@/components/ui/image-slider";
 import { SpecTable } from "@/components/product/spec-table";
 import { OptionList } from "@/components/product/option-list";
+import { TechnicalDrawings } from "@/components/product/technical-drawings";
 import {
   getProductBySlug,
   getAllSlugs,
@@ -41,26 +43,38 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* HERO — image + type, asymmetric */}
-      <section className="bg-ivory border-b border-rule">
-        <Container className="pt-16 pb-20 md:pt-20 md:pb-24">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            <div className="lg:col-span-5 order-2 lg:order-1">
+      {/* HERO — editorial split: text inside container, image full-bleed right
+          The left column's lg:pl-[max(...)] math mirrors Container so the text
+          starts at the container's content edge, while the right image runs
+          all the way to the viewport edge. */}
+      <section className="bg-ivory border-b border-rule overflow-hidden">
+        <div className="grid lg:grid-cols-2 items-stretch">
+          {/* LEFT — text */}
+          <div className="flex items-center order-2 lg:order-1 px-6 sm:px-8 py-16 md:py-20 lg:py-24 lg:pl-[max(3rem,calc((100vw-1200px)/2+3rem))] lg:pr-16 xl:pr-24">
+            <div className="max-w-md">
               <div className="flex items-center gap-4">
                 <span className="block w-8 h-px bg-bronze" />
                 <span className="eyebrow capitalize">{product.category}</span>
               </div>
-              <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl text-green leading-[1.05]">
+              <h1 className="mt-6 font-display text-green leading-[1.02]" style={{ fontSize: "clamp(3.5rem, 6vw, 6rem)" }}>
                 {product.heading}
               </h1>
               {product.subheading && (
-                <p className="mt-5 text-lg text-bronze">{product.subheading}</p>
+                <>
+                  <span className="mt-7 block w-12 h-px bg-bronze" aria-hidden />
+                  <p className="mt-5 text-lg text-bronze leading-snug">
+                    {product.subheading}
+                  </p>
+                </>
               )}
               {product.intro?.length > 0 && (
                 <div className="mt-8 space-y-4 text-green/75 leading-relaxed">
-                  {product.intro.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
+                  {/* Keep the hero light — show only the first paragraph here.
+                      Any further intro paragraphs surface in later sections. */}
+                  <p>{product.intro[0]}</p>
+                  {product.intro[1] && (
+                    <p className="text-green/65">{product.intro[1]}</p>
+                  )}
                 </div>
               )}
               <div className="mt-10">
@@ -69,19 +83,69 @@ export default async function ProductPage({ params }: PageProps) {
                 </Button>
               </div>
             </div>
-            <div className="lg:col-span-7 order-1 lg:order-2">
-              <Media
-                src={product.image}
-                alt={product.imageAlt ?? product.heading}
-                aspect="aspect-[4/3]"
-                tone="green"
-                placeholderLabel={`${product.heading} · 4:3`}
-                priority
-                sizes="(min-width: 1024px) 58vw, 100vw"
-              />
-            </div>
           </div>
-        </Container>
+
+          {/* RIGHT — full-bleed image slider (falls back to single image,
+              then to a branded placeholder when no images are assigned) */}
+          <div className="order-1 lg:order-2 h-full">
+            <ImageSlider
+              images={
+                product.images && product.images.length > 0
+                  ? product.images
+                  : product.image
+                    ? [product.image]
+                    : []
+              }
+              alt={product.imageAlt ?? product.heading}
+              aspect="aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[640px]"
+              tone="green"
+              placeholderLabel={product.heading}
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="h-full"
+            />
+          </div>
+        </div>
+
+        {/* SPEC STRIP — at-a-glance facts beneath the hero */}
+        {product.spec && (
+          <div className="border-t border-rule">
+            <Container className="py-5">
+              <ul className="flex flex-wrap items-center justify-center md:justify-between gap-x-10 gap-y-3 text-[0.65rem] tracking-[0.22em] uppercase text-green/60 font-medium">
+                {product.spec.openingStyle && (
+                  <li className="inline-flex items-center gap-3">
+                    <span className="text-bronze">●</span>
+                    {product.spec.openingStyle}
+                  </li>
+                )}
+                {product.spec.profileWidth && (
+                  <li className="inline-flex items-center gap-3">
+                    <span className="text-bronze">●</span>
+                    {product.spec.profileWidth}
+                  </li>
+                )}
+                {product.spec.glassOptions && (
+                  <li className="inline-flex items-center gap-3">
+                    <span className="text-bronze">●</span>
+                    Double-Glazed Std.
+                  </li>
+                )}
+                {product.spec.glassStandard && (
+                  <li className="inline-flex items-center gap-3">
+                    <span className="text-bronze">●</span>
+                    {product.spec.glassStandard}
+                  </li>
+                )}
+                {product.spec.model && (
+                  <li className="hidden lg:inline-flex items-center gap-3">
+                    <span className="text-bronze">●</span>
+                    {product.spec.model}
+                  </li>
+                )}
+              </ul>
+            </Container>
+          </div>
+        )}
       </section>
 
       {/* BENEFITS */}
@@ -210,6 +274,9 @@ export default async function ProductPage({ params }: PageProps) {
           </Container>
         </section>
       )}
+
+      {/* TECHNICAL DRAWINGS — rendered only when product.drawingType is set */}
+      {product.drawingType && <TechnicalDrawings type={product.drawingType} />}
 
       {/* RELATED */}
       {related.length > 0 && (

@@ -13,7 +13,9 @@ export const CLOUDINARY_CLOUD_NAME = "drlrwvdta";
 
 /** Home hero image. */
 export const heroImage =
-  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779071068/CW_D_hero_pregyr.png";
+  //"https://res.cloudinary.com/drlrwvdta/image/upload/v1779071068/CW_D_hero_pregyr.png";
+  // "https://res.cloudinary.com/drlrwvdta/image/upload/v1778122363/CW_D-hero_t370mt.png";
+  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779240866/CW_D-Hero_em6taf.png";
 
 /**
  * Edited project gallery, ordered cwd-edited-001 … 013.
@@ -34,6 +36,9 @@ export const galleryImages = [
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086220/cwd-edited-012_d5cnzl.png",
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086180/cwd-edited-013_rcgz3m.png",
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779188584/CW_D_AW_xbdxni.png",
+  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779193276/CW_D_SW_ehtdji.png",
+  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779193459/CW_D_CW_gyn0t4.png",
+  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779194030/CW_D_HW_vtjpw1.png",
 ] as const;
 
 export type GalleryImage = (typeof galleryImages)[number];
@@ -55,15 +60,15 @@ export type GalleryImage = (typeof galleryImages)[number];
  */
 export const productImages: Record<string, string[]> = {
   // ── Doors ──
-  "sliding-door": [galleryImages[0]],
+  "sliding-door": [galleryImages[2]],
   "folding-door": [galleryImages[1]],
   "glazed-door": [galleryImages[2]],
 
   // ── Windows ──
   "awning-window": [galleryImages[13], galleryImages[3]],
-  "sliding-windows-canberra": [galleryImages[7]],
-  "casement-window": [galleryImages[6]],
-  "hung-windows": [galleryImages[5]],
+  "sliding-windows-canberra": [galleryImages[14], galleryImages[7]],
+  "casement-window": [galleryImages[15],galleryImages[6]],
+  "hung-windows": [galleryImages[16], galleryImages[5]],
 
   // ── Non-product pages ──
   "thermal-break-window": [galleryImages[10]],
