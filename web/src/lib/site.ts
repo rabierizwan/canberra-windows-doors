@@ -31,7 +31,7 @@ export const site = {
     headline: "Premium quality, honest pricing.",
     body: [
       "For over seven years, we've supplied premium European-grade aluminium windows and doors directly to homes across Canberra and Sydney.",
-      "No distributor markup. No inflated trade-channel pricing. Just considered design, fair value, and a 10-year warranty as standard.",
+      "No distributor markup. No inflated trade-channel pricing.",
       "And when we install, we maintain — the windows and doors we fit are still performing in five, ten, fifteen years, looked after by the same team that put them in.",
     ],
   },

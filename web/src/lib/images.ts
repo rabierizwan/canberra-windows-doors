@@ -79,6 +79,7 @@ export const cadImages = {
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518015/CD-cad2_qlnp2k.png",
   ],
   bifoldingDoor: [
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779586604/Bifold-door-opening-2_tfjfkf.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779584599/Bifold-door-opening_jf4ipg.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518088/biFD-cad1_srgxrb.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518076/biFD-cad2_dvc6jn.png",

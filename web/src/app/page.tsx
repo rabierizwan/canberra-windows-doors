@@ -55,7 +55,7 @@ export default function HomePage() {
       <FeaturedProject />
 
       {/* 09 — Brand partners */}
-      <BrandPartners />
+      {/* <BrandPartners /> */}
 
       {/* 10 — Testimonials */}
       <Testimonials />
