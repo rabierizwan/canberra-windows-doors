@@ -13,10 +13,10 @@ export type FeaturedProject = {
 export const featuredProject: FeaturedProject = {
   title: "A residence in Whitlam",
   location: "16 Chaloupka Street, Whitlam ACT",
-  productsUsed: ["Awning Windows", "Sliding Doors", "Glazed Doors"],
+  productsUsed: ["Awning Windows", "Sliding Doors", "Bi-Folding Doors"],
   story:
-    "Full glazing replacement for a contemporary Whitlam residence — combining HT102 thermal-break awning windows with full-height sliding doors to maximise natural light without compromising on energy performance.",
-  image: galleryImages[11],
+    "Full glazing replacement for a contemporary Whitlam residence — combining CWD100 thermally broken awning windows with full-height sliding doors to maximise natural light without compromising on energy performance.",
+  image: galleryImages[17],
   imageAlt:
-    "Residential install in Whitlam ACT featuring CW&D HT102 awning windows and sliding doors",
+    "Residential install in Whitlam ACT featuring CW&D CWD100 awning windows and sliding doors",
 };

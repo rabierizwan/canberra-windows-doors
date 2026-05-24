@@ -42,6 +42,8 @@ export const galleryImages = [
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779193276/CW_D_SW_ehtdji.png", // 14  Sliding window
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779193459/CW_D_CW_gyn0t4.png", // 15  Casement window
   "https://res.cloudinary.com/drlrwvdta/image/upload/v1779194030/CW_D_HW_vtjpw1.png", // 16  Hung window
+
+  "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086214/cwd-edited-009_a997lw.png" // Whitlam
 ] as const;
 
 export type GalleryImage = (typeof galleryImages)[number];
@@ -61,56 +63,56 @@ export type GalleryImage = (typeof galleryImages)[number];
  * entry is treated as the "lead" CAD and surfaces first in the slider.
  */
 export const cadImages = {
+  // ── Doors ──
+  stackerDoor: [
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517815/StD-cad1_r7yw4y.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517814/StD-cad5_ytlagf.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517813/StD-cad3_jtsnep.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517813/StD-cad4_agkl2i.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517813/StD-cad2_ni0syh.png",
+  ],
+  casementDoor: [
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779584412/Casement-door-opening_rlylhd.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518025/CD-cad1_kuvkzc.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518016/CD-cad3_j5efzx.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518015/CD-cad2_qlnp2k.png",
+  ],
+  bifoldingDoor: [
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779584599/Bifold-door-opening_jf4ipg.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518088/biFD-cad1_srgxrb.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518076/biFD-cad2_dvc6jn.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518076/biFD-cad3_oobcts.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518083/biFD-cad4_uwpdld.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518076/biFD-cad5_mqrvz0.png",
+  ],
+  slidingDoor: [
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779086179/cwd-edited-003_ldxyou.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518167/SD-cad1_raywib.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518156/SD-cad2_dewb9w.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518157/SD-cad3_mtvvea.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518158/SD-cad4_rn5ipx.png",
+  ],
+
+  // ── Windows ──
   awningWindow: [
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779244055/AW-cad_mwpvtq.png",
-    //"https://res.cloudinary.com/drlrwvdta/image/upload/v1779245294/AW-cad-collection_iymejo.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255959/AW-cad2_gqmzo4.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255957/AW-cad3_wykswp.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255957/AW-cad4_rcmjcz.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255958/AW-cad5_quozby.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255958/AW-cad6_cfhnlm.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255959/AW-cad7_vynd5r.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255959/AW-cad8_sdk7w2.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255959/AW-cad9_hlkygx.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255959/AW-cad10_j7qcqd.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518394/AW-cad1_nq671b.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518394/AW-cad2_pyrx11.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518393/AW-cad3_knlkd7.png",
   ],
   slidingWindow: [
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779244055/SW-cad1_dedamx.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779244057/SW-cad2_w6ytmg.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779245295/SW-cad-collection_cudfaq.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257024/SW-cad2_wxkbaa.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257023/SW-cad3_dttqn0.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257024/SW-cad6_d5k9rz.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257025/SW-cad7_obiyia.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257026/SW-cad8_d3znra.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257026/SW-cad10_n52gzw.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257026/SW-cad11_zxyiyx.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779257026/SW-cad12_bcne4n.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518353/SW-cad1_doy8ct.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518351/SW-cad2_x2cdfr.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518354/SW-cad3_zi8tyw.png",
   ],
   casementWindow: [
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255669/CW-cad_sr9zml.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255669/CW-cad2_pqurzd.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255669/CW-cad3_lcaozp.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255670/CW-cad4_aon0fm.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255671/CW-cad5_ylwq1a.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255670/CW-cad6_jkz0ke.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255671/CW-cad7_k1dyxs.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255671/CW-cad8_n8geok.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255671/CW-cad9_vtqv8r.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255672/CW-cad10_oxc7ux.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779255669/CW-cad11_cd0q72.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518245/CW-cad1_jq3rpj.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518244/CW-cad2_u08sm5.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518244/CW-cad3_gka9yd.png",
   ],
   hungWindow: [
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256863/HW-cad1_ogewtz.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256863/HW-cad2_u6srr7.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256862/HW-cad3_kttohe.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256862/HW-cad4_l3cefk.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256862/HW-cad5_vh4iit.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256862/HW-cad6_iaimce.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256861/HW-cad7_cbu2so.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256861/HW-cad8_gclaxc.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256861/HW-cad9_uj33yn.png",
-    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779256863/HW-cad10_dnkodr.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518293/HW-cad1_mhak7m.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518293/HW-cad2_utzw5r.png",
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779518294/HW-cad3_ms2xtl.png",
   ],
 } satisfies Record<string, readonly string[]>;
 
@@ -126,35 +128,28 @@ export const cadImages = {
  * (src/data/products/index.ts) reads from here automatically.
  */
 export const productImages: Record<string, string[]> = {
-  // ── Doors ──
-  "sliding-door": [galleryImages[2]],
-  "folding-door": [galleryImages[1]],
-  "glazed-door": [galleryImages[2]],
+  // ── Doors (CAD-led, no AI lead shot yet) ──
+  "sliding-door": [...cadImages.slidingDoor],
+  "folding-door": [...cadImages.bifoldingDoor],
+  "stacker-door": [...cadImages.stackerDoor],
+  "casement-door": [...cadImages.casementDoor],
 
-  // ── Windows ──
+  // ── Windows (AI lead shot + CAD details) ──
   "awning-window": [
     galleryImages[13], // CW_D_AW (lead shot)
-    cadImages.awningWindow[0],
-    cadImages.awningWindow[1],
+    ...cadImages.awningWindow,
   ],
   "sliding-windows-canberra": [
     galleryImages[14], // CW_D_SW (lead shot)
-    cadImages.slidingWindow[0],
-    cadImages.slidingWindow[1],
-    cadImages.slidingWindow[2],
-    cadImages.slidingWindow[3],
+    ...cadImages.slidingWindow,
   ],
   "casement-window": [
     galleryImages[15], // CW_D_CW (lead shot)
-    galleryImages[6], // project photo
-    cadImages.casementWindow[0],
-    cadImages.casementWindow[1],
+    ...cadImages.casementWindow,
   ],
   "hung-windows": [
     galleryImages[16], // CW_D_HW (lead shot)
-    galleryImages[5], // project photo
-    cadImages.hungWindow[0],
-    cadImages.hungWindow[1],
+    ...cadImages.hungWindow,
   ],
 
   // ── Non-product pages ──
