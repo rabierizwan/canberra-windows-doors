@@ -65,6 +65,7 @@ export type GalleryImage = (typeof galleryImages)[number];
 export const cadImages = {
   // ── Doors ──
   stackerDoor: [
+    "https://res.cloudinary.com/drlrwvdta/image/upload/v1779586604/Stacker-door-opening_wphahe.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517815/StD-cad1_r7yw4y.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517814/StD-cad5_ytlagf.png",
     "https://res.cloudinary.com/drlrwvdta/image/upload/v1779517813/StD-cad3_jtsnep.png",
