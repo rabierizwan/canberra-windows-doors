@@ -246,9 +246,12 @@ export function Header() {
                   quality={95}
                   priority
                   className="select-none"
+                  // Width in CSS; height: 'auto' so the browser derives it
+                  // from the source's natural aspect ratio (silences the
+                  // next/image aspect-ratio warning).
                   style={{
                     width: MONOGRAM_BASE_WIDTH,
-                    height: MONOGRAM_BASE_HEIGHT,
+                    height: "auto",
                   }}
                 />
               </div>
@@ -360,7 +363,8 @@ export function Header() {
                 sizes="160px"
                 quality={95}
                 priority
-                className="select-none w-20 h-auto"
+                className="select-none"
+                style={{ width: "5rem", height: "auto" }}
               />
             </Link>
             <button

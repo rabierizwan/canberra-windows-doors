@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    // Next.js 16 only generates the qualities you allowlist here.
+    // Default is [75]. We pass quality={95} on the brand monogram for
+    // crispness at small sizes — include 95 so the optimiser will serve it.
+    qualities: [75, 95],
+
     // Allowlist for external image hosts used by next/image.
     // Add a new entry here whenever you start hosting images on a new domain.
     remotePatterns: [

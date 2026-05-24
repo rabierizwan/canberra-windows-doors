@@ -28,7 +28,10 @@ export function Hero({ image }: { image?: string }) {
           placeholderLabel="Hero photograph · 16:9"
           priority
           sizes="100vw"
-          className="h-[88vh] min-h-[640px] max-h-[920px]"
+          // Crop priority: keep the LEFT side of the photo visible on mobile
+          // (where the viewport is narrow and the wide hero gets cropped),
+          // recentre on desktop where there's room for the full composition.
+          className="h-[88vh] min-h-[640px] max-h-[920px] [&_img]:object-[15%_center] md:[&_img]:object-center"
         />
         {/* Right-side darkening for text legibility + soft top/bottom edges */}
         <div
