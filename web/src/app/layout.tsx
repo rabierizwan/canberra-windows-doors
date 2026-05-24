@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Canberra Windows & Doors",
   },
   description:
-    "Premium aluminium windows and doors in Canberra. Sliding, folding, casement and front doors; awning, hung, sliding, HT102 and thermal break windows. Trusted across the ACT for over a decade.",
+    "Premium aluminium windows and doors in Canberra. Sliding, folding and glazed doors; awning, hung, sliding and casement windows in the CWD80 Semi-Commercial Series or CWD100 Thermally Broken range. Trusted across the ACT for over a decade.",
   openGraph: {
     type: "website",
     locale: "en_AU",

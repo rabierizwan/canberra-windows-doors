@@ -19,7 +19,7 @@ export const slidingWindowsCanberra: Product = {
     },
     {
       title: "Wide Aperture, Sleek Sightline",
-      body: "Up to 50% of the opening clears for ventilation, with thin 102mm frames keeping the view open.",
+      body: "Up to 50% of the opening clears for ventilation, with thin 100mm frames keeping the view open.",
     },
     {
       title: "Smooth Glide, Quiet Close",
@@ -27,22 +27,22 @@ export const slidingWindowsCanberra: Product = {
     },
   ],
   spec: {
-    model: "HT102",
+    model: "CWD80 · CWD100",
     openingStyle: "Sliding",
     profileThickness: "2.0mm",
-    profileWidth: "102mm",
+    profileWidth: "80mm (CWD80) · 100mm (CWD100)",
     glassOptions: "5mm + 12A + 5mm / 6mm + 12A + 6mm",
     glassStandard: "AS/NZS 2208",
-    extrusionProfile: "6063-T5 Aluminium",
+    extrusionProfile: "6063-T5 Aluminium (CWD100: thermally broken)",
     standardHardware: "Window pulley hardware — SIEGENIA (DE) / Doric (AU)",
     // warranty: "10 Years",
   },
-  glassTypes: ["Tempered", "Toughened", "Coated", "LOW-E", "Ordinary flat glass"],
+  glassTypes: ["Tempered", "Toughened", "Coated", "LOW-E"],
   glassColors: ["Clear", "Grey", "Blue", "Green", "Custom"],
-  profileColors: ["Matt Black", "Custom"],
-  hardwareBrands: ["Doric (AU)", "SIEGENIA (DE)", "Hoppe (DE)", "Roto (DE)", "Kinlong (CN)", "LSMA"],
+  profileColors: ["Matt Black", "Monument", "White"],
+  // hardwareBrands: ["Doric (AU)", "SIEGENIA (DE)", "Hoppe (DE)", "Roto (DE)", "Kinlong (CN)", "LSMA"],
   flyscreens: ["Aluminium", "Fiberglass", "Stainless Steel"],
-  applications: ["Hospitality", "Residential", "Healthcare", "School", "Commercial", "Municipal"],
+  applications: ["Residential", "Commercial", "Hospitality", "Healthcare", "School", "Municipal"],
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {

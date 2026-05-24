@@ -26,15 +26,15 @@ export type TechnicalDrawing = {
   type: DrawingType;
   /** Human-readable product type, e.g. "Sliding Window" */
   typeLabel: string;
-  /** Full display title, e.g. "100 Thermal Broken Series Sliding Window" */
+  /** Full display title, e.g. "100 Thermally Broken Windows Sliding Window" */
   title: string;
   /** Cloudinary-hosted PDF URL */
   url: string;
 };
 
 const SERIES_LABEL: Record<DrawingSeries, string> = {
-  "80": "80 Series",
-  "100": "100 Thermal Broken Series",
+  "80": "80 mm Semi-Commercial Series",
+  "100": "100 mm Thermally Broken Windows",
 };
 
 const TYPE_LABEL: Record<DrawingType, string> = {

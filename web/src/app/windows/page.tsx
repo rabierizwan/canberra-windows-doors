@@ -9,7 +9,7 @@ import { getProductsByCategory } from "@/data/products";
 export const metadata: Metadata = {
   title: "Windows",
   description:
-    "The CW&D windows collection — premium aluminium and thermal-broken windows for Canberra and Sydney. Awning, hung, sliding, casement and HT102.",
+    "The CW&D windows collection — premium aluminium windows for Canberra and Sydney. Awning, hung, sliding and casement, available in CWD80 Semi-Commercial or CWD100 Thermally Broken series.",
 };
 
 /** "Find your window" — one entry per window type. */
@@ -18,7 +18,7 @@ const decisionGuide = [
     label: "For ventilation",
     title: "Awning",
     body:
-      "Top-hung sashes that open in light rain. Available in the 80 standard and 100 thermal-broken series.",
+      "Top-hung sashes that open in light rain. Available in the 80 mm Semi-Commercial Series or 100 mm Thermally Broken Windows.",
     href: "/services/awning-window",
   },
   {
@@ -60,8 +60,8 @@ export default function WindowsIndexPage() {
             The windows collection.
           </h1>
           <p className="mt-8 text-lg text-green/70 max-w-2xl leading-relaxed">
-            Eight window types — from classical hung sashes to thermally
-            broken HT102 frames built for Canberra winters and Sydney
+            Four window types — from classical hung sashes to thermally
+            broken CWD100 frames built for Canberra winters and Sydney
             summers. Premium European supply, fair Australian pricing.
           </p>
         </Container>
@@ -155,9 +155,9 @@ export default function WindowsIndexPage() {
               href="/services/thermal-break-window"
               className="group block border-t border-bronze pt-6 hover:border-green transition-colors"
             >
-              <span className="eyebrow eyebrow-muted">The 100 Series</span>
+              <span className="eyebrow eyebrow-muted">CWD100 Series</span>
               <h3 className="mt-4 font-display text-3xl text-green group-hover:text-bronze transition-colors">
-                Thermal-Broken Windows
+                Thermally Broken Windows
               </h3>
               <p className="mt-4 text-green/70 leading-relaxed">
                 Why a thermal break matters — energy efficiency, condensation

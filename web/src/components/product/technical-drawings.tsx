@@ -45,8 +45,8 @@ export function TechnicalDrawings({ type }: { type: DrawingType }) {
                     <div>
                       <span className="eyebrow eyebrow-muted not-italic font-sans">
                         {d.series === "80"
-                          ? "80 Series"
-                          : "100 Thermal Broken Series"}
+                          ? "80 mm Semi-Commercial Series"
+                          : "100 mm Thermally Broken Windows"}
                       </span>
                       <h3 className="mt-2 font-display text-2xl text-green group-hover:text-bronze transition-colors">
                         {d.typeLabel}

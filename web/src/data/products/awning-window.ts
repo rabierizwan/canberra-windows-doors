@@ -3,20 +3,20 @@ import type { Product } from "@/types/product";
 /**
  * Merged awning-window page. Consolidates the former HT102, HT76 Awning Window
  * and "80 Series Awning" pages — all of which described the same two products
- * (the 80 standard and 100 thermal-broken awning windows).
+ * (the 80 Semi-Commercial and 100 Thermally Broken awning windows).
  */
 export const awningWindow: Product = {
   slug: "awning-window",
   category: "windows",
   drawingType: "AW",
   heading: "Awning Window",
-  subheading: "Top-hung ventilation — 80 standard or 100 thermal-broken",
-  metaTitle: "Awning Windows in Canberra & Sydney | 80 & 100 Series",
+  subheading: "Top-hung ventilation — 80 mm Semi-Commercial or 100 mm Thermally Broken",
+  metaTitle: "Awning Windows in Canberra & Sydney | CWD80 & CWD100",
   metaDescription:
-    "Aluminium awning windows — top-hung sashes that ventilate in any weather. Available in the 80 standard series or the 100 thermal-broken series for NCC 7-star performance.",
+    "Aluminium awning windows — top-hung sashes that ventilate in any weather. Available in the 80 mm Semi-Commercial Series or the 100 mm Thermally Broken Windows for NCC 7-star performance.",
   intro: [
     "An awning window is top-hung and opens outward from the base, drawing fresh air through even in light rain. A smooth hand-crank winder gives precise control over the opening — ideal for kitchens, bathrooms and high or hard-to-reach windows.",
-    //"Available in the 80 Series standard frame or the 100 thermal-broken series. Double-glazed as standard.",
+    //"Available in the 80 Semi-Commercial Series or the 100 Thermally Broken Windows. Double-glazed as standard.",
   ],
   benefits: [
     {
@@ -37,30 +37,30 @@ export const awningWindow: Product = {
     },
   ],
   spec: {
-    model: "80 Series · 100 Series",
+    model: "CWD80 · CWD100",
     openingStyle: "Awning (top-hung)",
-    profileWidth: "80mm (80 Series) · 102mm (100 Series)",
+    profileWidth: "80mm (CWD80) · 100mm (CWD100)",
     profileThickness: "1.8mm – 2.0mm",
     glassOptions: "Double-glazed 5mm + 12A + 5mm standard",
     glassStandard: "AS/NZS 2208",
-    extrusionProfile: "6063-T5 Aluminium (100 Series: thermally broken)",
+    extrusionProfile: "6063-T5 Aluminium (CWD100: thermally broken)",
     standardHardware: "Hand-crank winder",
     //warranty: "10 Years",
   },
-  glassTypes: ["Tempered", "Toughened", "Coated", "LOW-E", "Ordinary flat glass"],
+  glassTypes: ["Tempered", "Toughened", "Coated", "LOW-E"],
   glassColors: ["Clear", "Grey", "Blue", "Green", "Custom"],
-  profileColors: ["Matt Black", "Custom"],
-  hardwareBrands: ["Doric (AU)", "SIEGENIA (DE)", "Hoppe (DE)", "Roto (DE)", "Kinlong (CN)", "LSMA"],
+  profileColors: ["Matt Black", "Monument", "White"],
+  // hardwareBrands: ["Doric (AU)", "SIEGENIA (DE)", "Hoppe (DE)", "Roto (DE)", "Kinlong (CN)", "LSMA"],
   flyscreens: ["Aluminium", "Fiberglass", "Stainless Steel"],
-  applications: ["Hospitality", "Residential", "Healthcare", "School", "Commercial", "Municipal"],
+  applications: ["Residential", "Commercial", "Hospitality", "Healthcare", "School", "Municipal"],
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
       heading: "Two series to choose from",
       body: [
-        "80 Series — a standard aluminium frame on an 80mm profile. Double-glazed, well-sealed and cost-effective for the majority of residential openings.",
-        "100 Thermal Broken Series — a 102mm frame with a reinforced polyamide thermal break separating the inside and outside faces. Minimises heat transfer and helps new builds and renovations meet NCC 7-star energy requirements.",
-        "Not sure which suits your project? See our thermal-broken series explainer, or ask us for a recommendation when you request a quote.",
+        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Double-glazed, well-sealed and cost-effective for the majority of residential and semi-commercial openings.",
+        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break separating the inside and outside faces. Minimises heat transfer and helps new builds and renovations meet NCC 7-star energy requirements.",
+        "Not sure which suits your project? See our thermal-broken explainer, or ask us for a recommendation when you request a quote.",
       ],
     },
     {
