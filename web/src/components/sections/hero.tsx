@@ -5,7 +5,15 @@ import { site } from "@/lib/site";
 
 /**
  * Section 02 — full-bleed photographic hero with editorial type overlay.
- * Image swaps in via Cloudinary later; layout is locked by the aspect ratio.
+ *
+ * All text reads in ivory (not bronze) because bronze is a warm earth tone
+ * that loses contrast against the cream/warm tones common in interior
+ * photography. Bronze remains as a brand-signature accent on the small
+ * hairline rule next to the eyebrow.
+ *
+ * The two-layer gradient docks darker tones to the right side where the
+ * text sits, so the photo's left/centre composition (windows, architecture)
+ * stays crisp.
  */
 export function Hero({ image }: { image?: string }) {
   return (
@@ -22,29 +30,49 @@ export function Hero({ image }: { image?: string }) {
           sizes="100vw"
           className="h-[88vh] min-h-[640px] max-h-[920px]"
         />
-        {/* Subtle Deep Green vignette */}
+        {/* Right-side darkening for text legibility + soft top/bottom edges */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            background:
-              "linear-gradient(to bottom, rgba(20,31,24,0.55) 0%, rgba(20,31,24,0.15) 35%, rgba(20,31,24,0.05) 60%, rgba(20,31,24,0.65) 100%)",
+            background: [
+              // Horizontal: dim the right side where the text sits, keep the left clean
+              "linear-gradient(to right, rgba(20,31,24,0) 30%, rgba(20,31,24,0.35) 55%, rgba(20,31,24,0.75) 100%)",
+              // Vertical: gentle top/bottom vignette
+              "linear-gradient(to bottom, rgba(20,31,24,0.2) 0%, rgba(20,31,24,0) 25%, rgba(20,31,24,0) 70%, rgba(20,31,24,0.45) 100%)",
+            ].join(", "),
           }}
         />
       </div>
 
-      {/* Content */}
-      <Container as="div" className="relative h-[88vh] min-h-[640px] max-h-[920px] flex flex-col">
-        <div className="flex-1 flex items-end pb-20 md:pb-28">
-          <div className="max-w-4xl text-ivory">
-            <span className="eyebrow text-bronze-soft">{site.hero.eyebrow}</span>
-            <h1 className="mt-6 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.98] text-ivory">
+      {/* Content — docked bottom-right */}
+      <Container
+        as="div"
+        className="relative h-[88vh] min-h-[640px] max-h-[920px] flex flex-col"
+      >
+        <div className="flex-1 flex items-end justify-end pb-16 md:pb-24">
+          <div className="max-w-md text-ivory">
+            {/* Eyebrow — ivory for legibility, bronze rule as the brand accent */}
+            <div className="flex items-center gap-3">
+              <span
+                className="block w-8 h-px bg-bronze-soft"
+                aria-hidden
+              />
+              <span className="eyebrow text-ivory">{site.hero.eyebrow}</span>
+            </div>
+
+            <h1
+              className="mt-5 font-display leading-[1.05] text-ivory"
+              style={{ fontSize: "clamp(2rem, 3.5vw, 3.5rem)" }}
+            >
               {site.hero.headline}
             </h1>
-            <p className="mt-8 max-w-xl text-base md:text-lg leading-relaxed text-ivory/80">
+
+            <p className="mt-6 text-sm md:text-base leading-relaxed text-ivory/90">
               {site.hero.sub}
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button href="/request-a-quote" variant="primary-light" size="lg">
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Button href="/request-a-quote" variant="primary-light" size="md">
                 Request a Quote
               </Button>
               <a

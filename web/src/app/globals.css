@@ -59,22 +59,27 @@ h1, h2, h3, h4, .font-display {
   letter-spacing: -0.015em;
 }
 
-/* Tracked-out eyebrow utility — matches the wordmark style on the logo */
-.eyebrow {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-bronze);
-}
+/* Tracked-out eyebrow utility — matches the wordmark style on the logo.
+   Inside @layer components so Tailwind text-* utilities can override the
+   default bronze colour when needed (e.g. text-ivory on photographic
+   backgrounds where bronze loses contrast). */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-bronze);
+  }
 
-.eyebrow-muted {
-  color: var(--color-muted);
-}
+  .eyebrow-muted {
+    color: var(--color-muted);
+  }
 
-.eyebrow-light {
-  color: var(--color-muted-light);
+  .eyebrow-light {
+    color: var(--color-muted-light);
+  }
 }
 
 /* Hairline rules */

@@ -197,7 +197,7 @@ export function Header() {
         className={cn(
           "bg-ivory/90 backdrop-blur-md border-b border-rule",
           "transition-[padding] duration-300 ease-out motion-reduce:transition-none",
-          scrolled ? "py-1" : "pt-5 pb-12",
+          scrolled ? "py-1" : "pt-0 pb-4",
         )}
       >
         <Container as="div" className="grid grid-cols-3 items-center">
