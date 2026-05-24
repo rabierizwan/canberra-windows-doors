@@ -15,7 +15,8 @@ import { productImages } from "@/lib/images";
 // Doors
 import { slidingDoor } from "./sliding-door";
 import { foldingDoor } from "./folding-door";
-import { glazedDoor } from "./glazed-door";
+import { stackerDoor } from "./stacker-door";
+import { casementDoor } from "./casement-door";
 
 // Windows
 import { awningWindow } from "./awning-window";
@@ -32,7 +33,8 @@ const RAW_PRODUCTS: Product[] = [
   // Doors
   slidingDoor,
   foldingDoor,
-  glazedDoor,
+  stackerDoor,
+  casementDoor,
   // Windows
   awningWindow,
   slidingWindowsCanberra,

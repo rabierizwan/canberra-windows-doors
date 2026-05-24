@@ -6,22 +6,22 @@
 export const site = {
   name: "Canberra Windows & Doors",
   shortName: "CW&D",
-  tagline: "Quietly considered. Sensibly priced.",
+  tagline: "Premium windows. Sensibly priced.",
   url: "https://canberrawindowsdoors.com.au",
 
   /** Headline used on the home hero */
   hero: {
     eyebrow: "Canberra · Sydney · Established ACT",
-    headline: "Quietly considered. Sensibly priced.",
+    headline: "Premium windows. Sensibly priced.",
     sub:
-      "Premium European-grade aluminium windows and doors, supplied directly to homes across Canberra and Sydney — without the distributor markup.",
+      "European-grade aluminium windows and doors, supplied directly to homes across Canberra and Sydney — without the distributor markup.",
   },
 
   /** Trust strip numbers */
   trustStats: [
     { label: "Years", value: "7" },
-    { label: "Projects", value: "80+" },
-    { label: "Warranty", value: "10 Years" },
+    { label: "Projects", value: "100+" },
+    //{ label: "Warranty", value: "10 Years" },
     { label: "Compliant", value: "AS/NZS" },
   ],
 
@@ -51,17 +51,17 @@ export const site = {
     phonePrimaryHref: "tel:+61423791652",
     phoneAlt: "0403 306 714",
     phoneAltHref: "tel:+61403306714",
-    email: "info@actwindowsdoors.com",
-    emailHref: "mailto:info@actwindowsdoors.com",
+    email: "info@canberrawindowsdoors.com",
+    emailHref: "mailto:info@canberrawindowsdoors.com",
   },
 
   address: {
-    street: "66 Thwaites Crescent",
-    suburb: "Wright",
+    street: "16 Chaloupka St",
+    suburb: "Whitlam",
     state: "ACT",
     postcode: "2611",
     country: "Australia",
-    full: "66 Thwaites Crescent, Wright ACT 2611, Australia",
+    full: "16 Chaloupka St, Whitlam ACT 2611, Australia",
     // TODO: replace mapsUrl + lat/lng with the real Google Maps Place URL for 66 Thwaites Cres
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=66+Thwaites+Crescent,+Wright+ACT+2611",
@@ -91,8 +91,9 @@ export const site = {
     ],
     doors: [
       { label: "Sliding Door", href: "/services/sliding-door" },
-      { label: "Folding Door", href: "/services/folding-door" },
-      { label: "Glazed Door", href: "/services/glazed-door" },
+      { label: "Bi-folding Door", href: "/services/folding-door" },
+      { label: "Stacker Door", href: "/services/stacker-door" },
+      { label: "Casement Door", href: "/services/casement-door" },
     ],
     windows: [
       { label: "Awning Window", href: "/services/awning-window" },

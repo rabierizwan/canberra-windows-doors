@@ -23,8 +23,8 @@ const nextConfig: NextConfig = {
       { source: "/services/ht102", destination: "/services/awning-window", permanent: true },
       { source: "/services/ht76-awning-window", destination: "/services/awning-window", permanent: true },
       { source: "/services/80-series-awning-window", destination: "/services/awning-window", permanent: true },
-      // Casement Door renamed → Glazed Door
-      { source: "/services/casement-door", destination: "/services/glazed-door", permanent: true },
+      // Glazed Door replaced by Stacker Door (Casement Door re-introduced separately)
+      { source: "/services/glazed-door", destination: "/services/stacker-door", permanent: true },
       // Commercial Residential removed → windows index
       { source: "/services/commercial-residential-window", destination: "/windows", permanent: true },
       // Front Door removed earlier → doors index

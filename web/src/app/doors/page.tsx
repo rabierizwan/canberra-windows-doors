@@ -13,28 +13,35 @@ export const metadata: Metadata = {
     "The CW&D doors collection — premium aluminium and glass doors for Canberra and Sydney homes. Sliding, folding and casement options.",
 };
 
-/** Three "find your door" categories — matches the three door products. */
+/** Four "find your door" categories — matches the four door products. */
 const decisionGuide = [
   {
-    label: "For light",
+    label: "For everyday",
     title: "Sliding",
     body:
-      "Maximise natural light and connect indoor spaces seamlessly to outdoor rooms.",
+      "One or two glazed panels on rollers — the everyday opening for connecting indoor rooms to outdoor spaces.",
     href: "/services/sliding-door",
   },
   {
-    label: "For entertaining",
-    title: "Folding",
+    label: "For wide openings",
+    title: "Stacker",
     body:
-      "Open whole walls. Folding doors are made for entertainment spaces that breathe outdoors.",
+      "Three or four panels that stack behind one another — clean sightlines across very wide apertures.",
+    href: "/services/stacker-door",
+  },
+  {
+    label: "For entertaining",
+    title: "Bi-folding",
+    body:
+      "Multi-panel concertina that clears the full aperture — for spaces that open right up when you want them to.",
     href: "/services/folding-door",
   },
   {
-    label: "For everyday",
-    title: "Glazed",
+    label: "For traditional entries",
+    title: "Casement",
     body:
-      "Side-hinged and fully glazed — the classic door form with modern engineering.",
-    href: "/services/glazed-door",
+      "Side-hinged glazed door — the classic swing motion paired with a full glass panel. Single or double-leaf.",
+    href: "/services/casement-door",
   },
 ];
 
@@ -71,7 +78,7 @@ export default function DoorsIndexPage() {
           <h2 className="font-display text-4xl md:text-5xl text-green max-w-2xl mb-16">
             Choose by how you live.
           </h2>
-          <div className="grid md:grid-cols-3 gap-x-10 gap-y-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
             {decisionGuide.map((item) => (
               <Link
                 key={item.href}
@@ -104,7 +111,7 @@ export default function DoorsIndexPage() {
           <h2 className="font-display text-4xl md:text-5xl text-green mb-16 max-w-2xl">
             The full range.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
             {doors.map((p) => (
               <Link
                 key={p.slug}

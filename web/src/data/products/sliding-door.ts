@@ -5,11 +5,13 @@ export const slidingDoor: Product = {
   category: "doors",
   drawingType: "SD",
   heading: "Sliding Door",
-  metaTitle: "Sliding Door | High Quality Sliding Doors in Canberra",
+  subheading: "Glazed panels on rollers — 80 mm Semi-Commercial or 100 mm Thermally Broken",
+  metaTitle: "Sliding Doors in Canberra & Sydney | CWD80 & CWD100",
   metaDescription:
-    "Premium aluminium sliding doors in Canberra. Superior insulation, enhanced security, fully customisable in finish and size.",
+    "Aluminium sliding doors with large glazed panels that glide aside on premium roller tracks. Available in the 80 mm Semi-Commercial Series or the 100 mm Thermally Broken Windows.",
   intro: [
-    "Sliding doors blend elegance and enduring quality using premium materials. They provide natural light and connect indoor-outdoor spaces, with professional installation ensuring optimal performance.",
+    "A sliding door is built from large glazed panels that glide along premium roller tracks — opening the room to the outside without a swing arc and without giving up floor space.",
+    "Available in the 80 mm Semi-Commercial Series (CWD80) for everyday residential builds, or the 100 mm Thermally Broken Windows (CWD100) when energy performance matters most.",
   ],
   benefits: [
     {
@@ -18,7 +20,7 @@ export const slidingDoor: Product = {
     },
     {
       title: "Maximum Natural Light",
-      body: "Slim 75mm sightlines and large glass apertures pull daylight deep into the room.",
+      body: "Slim sightlines and large glass apertures pull daylight deep into the room.",
     },
     {
       title: "Multi-Point Locking",
@@ -26,22 +28,31 @@ export const slidingDoor: Product = {
     },
   ],
   spec: {
-    model: "HT75",
+    model: "CWD80 · CWD100",
     openingStyle: "Sliding",
-    profileThickness: "1.8mm",
-    profileWidth: "75mm",
+    profileThickness: "1.8mm – 2.0mm",
+    profileWidth: "80mm (CWD80) · 100mm (CWD100)",
     glassOptions: "5mm + 12A + 5mm / 6mm + 12A + 6mm tempered",
     glassStandard: "AS/NZS 2208",
-    extrusionProfile: "6063-T5 Aluminium",
+    extrusionProfile: "6063-T5 Aluminium (CWD100: thermally broken)",
     standardHardware: "Door roller hardware — Doric (AU) / SIEGENIA (DE)",
     // warranty: "10 Years",
   },
   glassTypes: ["Tempered", "Toughened", "Coated", "LOW-E"],
   glassColors: ["Clear", "Grey", "Blue", "Green", "Custom"],
-  profileColors: ["Matt Black", "Custom"],
-  hardwareBrands: ["Doric (AU)", "SIEGENIA (DE)", "Kinlong (CN)", "Hoppe (DE)", "Roto (DE)"],
+  profileColors: ["Matt Black", "Monument", "White"],
+  // hardwareBrands: ["Doric (AU)", "SIEGENIA (DE)", "Kinlong (CN)", "Hoppe (DE)", "Roto (DE)"],
   flyscreens: ["Aluminium", "Fiberglass", "Stainless Steel"],
-  applications: ["Hospitality", "Residential", "Healthcare", "School", "Commercial", "Municipal"],
+  applications: ["Residential", "Commercial", "Hospitality", "Healthcare", "School", "Municipal"],
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
+  sections: [
+    {
+      heading: "Two series to choose from",
+      body: [
+        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Cost-effective for most residential and semi-commercial installs.",
+        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break. Higher energy performance, helps meet NCC 7-star requirements.",
+      ],
+    },
+  ],
   ctaLabel: "Request a Quote",
 };
