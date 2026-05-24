@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
+import { QuoteForm } from "@/components/forms/quote-form";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Request a quote for premium windows and doors in Canberra or Sydney. Tell us about your project and we'll get back to you.",
+    "Request a quote for premium windows and doors in Canberra or Sydney. Tell us about your project and we'll get back to you within one business day.",
 };
 
 export default function QuotePage() {
   return (
     <>
+      {/* HERO */}
       <section className="pt-24 pb-20 border-b border-rule">
         <Container>
           <div className="flex items-center gap-4 mb-6">
@@ -22,38 +23,69 @@ export default function QuotePage() {
             Request a quote.
           </h1>
           <p className="mt-8 text-lg text-green/70 max-w-2xl">
-            Tell us about your project. We&apos;ll respond within one business day
-            with options, timing and pricing.
+            Tell us about your project. We&apos;ll respond within one business
+            day with options, timing and pricing.
           </p>
         </Container>
       </section>
 
-      <section className="py-24 md:py-32">
+      {/* FORM + ASIDE */}
+      <section className="py-20 md:py-28">
         <Container>
-          <div className="max-w-2xl">
-            <p className="text-green/70">
-              The quote form will be wired up next — for now you can reach us
-              directly:
-            </p>
-            <ul className="mt-8 space-y-3 text-lg text-green">
-              <li>
-                Phone:{" "}
-                <a href={site.contact.phonePrimaryHref} className="text-bronze hover:underline">
-                  {site.contact.phonePrimary}
-                </a>
-              </li>
-              <li>
-                Email:{" "}
-                <a href={site.contact.emailHref} className="text-bronze hover:underline">
-                  {site.contact.email}
-                </a>
-              </li>
-            </ul>
-            <div className="mt-12">
-              <Button href="/contact" variant="secondary" size="lg">
-                Contact Page
-              </Button>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+            {/* Form column */}
+            <div className="lg:col-span-7">
+              <QuoteForm />
             </div>
+
+            {/* Aside — direct contact + hours */}
+            <aside className="lg:col-span-4 lg:col-start-9 space-y-10">
+              <div className="border-t border-bronze pt-6">
+                <span className="eyebrow eyebrow-muted not-italic font-sans">
+                  Prefer to talk?
+                </span>
+                <ul className="mt-4 space-y-3 text-green">
+                  <li>
+                    <a
+                      href={site.contact.phonePrimaryHref}
+                      className="font-display text-2xl hover:text-bronze transition-colors"
+                    >
+                      {site.contact.phonePrimary}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={site.contact.emailHref}
+                      className="text-sm hover:text-bronze transition-colors break-words"
+                    >
+                      {site.contact.email}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-t border-rule pt-6">
+                <span className="eyebrow eyebrow-muted not-italic font-sans">
+                  Hours
+                </span>
+                <p className="mt-4 text-sm text-green/80 leading-relaxed">
+                  {site.hours.weekdays}
+                  <br />
+                  {site.hours.weekend}
+                </p>
+              </div>
+
+              <div className="border-t border-rule pt-6">
+                <span className="eyebrow eyebrow-muted not-italic font-sans">
+                  Service Area
+                </span>
+                <p className="mt-4 text-sm text-green/80 leading-relaxed">
+                  Canberra &amp; the ACT
+                  <br />
+                  All Sydney suburbs
+                </p>
+              </div>
+            </aside>
           </div>
         </Container>
       </section>

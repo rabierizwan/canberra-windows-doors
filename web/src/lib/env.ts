@@ -10,6 +10,8 @@ const schema = z.object({
   CONTACT_RECIPIENT_EMAIL: z.string().email().default("info@actwindowsdoors.com"),
   CONTACT_FROM_EMAIL: z.string().email().default("onboarding@resend.dev"),
   NEXT_PUBLIC_GA_MEASUREMENT_ID: z.string().optional(),
+  /** Web3Forms access key — get one at https://web3forms.com (free). */
+  NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: z.string().optional(),
 });
 
 export const env = schema.parse({
@@ -18,4 +20,5 @@ export const env = schema.parse({
   CONTACT_RECIPIENT_EMAIL: process.env.CONTACT_RECIPIENT_EMAIL,
   CONTACT_FROM_EMAIL: process.env.CONTACT_FROM_EMAIL,
   NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+  NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
 });
