@@ -9,22 +9,21 @@ export const foldingDoor: Product = {
   metaDescription:
     "Aluminium bi-folding doors with two, three or four glazed panels. Available in the 80 mm Semi-Commercial Series or the 100 mm Thermally Broken Windows.",
   intro: [
-    "A bi-folding door is built from multiple glazed panels hinged together — fold them sideways like a concertina and the whole aperture clears, merging interior living with the space beyond.",
-    "Configurable as a two-, three- or four-panel set, hinged from the left, right or split down the middle. One leaf can act as a single passage door for everyday use; unfold the rest when you're opening up the room.",
-    "Available in the 80 mm Semi-Commercial Series (CWD80) for cost-effective residential installs, or the 100 mm Thermally Broken Windows (CWD100) when energy performance matters most.",
+    "Multiple glazed panels hinged together. Fold them away in a concertina and almost the full opening clears, so the indoor room and the outdoor space read as one.",
+    "Configurable from two to four panels, hinged left, right or split. Choose CWD80 for the elegant semi-commercial frame, or CWD100 thermally broken where you want the room sealed properly.",
   ],
   benefits: [
     {
-      title: "Open the Whole Wall",
-      body: "Panels stack neatly to one side, clearing up to 90% of the opening for true indoor–outdoor living.",
+      title: "The whole wall, open.",
+      body: "Panels stack neatly to one side and clear most of the opening — true indoor and outdoor in one room.",
     },
     {
-      title: "Two to Four Panels",
-      body: "Sized to your opening — two-leaf for narrower spans, three- or four-leaf for wider apertures. Hinged left, right or split.",
+      title: "Sized to the opening.",
+      body: "Two, three or four panels. Folded left, right or split. We confirm the configuration before fabrication.",
     },
     {
-      title: "Single-Pass Operation",
-      body: "Use one leaf as a normal swing door for everyday traffic. Unfold the rest only when you need the full opening.",
+      title: "One leaf for everyday.",
+      body: "Use a single leaf as a normal swing door for daily traffic. Unfold the rest only when you're opening it all up.",
     },
   ],
   spec: {
@@ -47,25 +46,10 @@ export const foldingDoor: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Panel configurations",
+      heading: "Same door, two frames.",
       body: [
-        "Two-panel — narrower openings, both panels fold to one side.",
-        "Three-panel — wider apertures with an odd-count fold; one leaf can serve as the single passage door.",
-        "Four-panel — split two-and-two for the widest opening, or stack all four to one side for an unbroken sweep.",
-        "We size each set to your opening and confirm the stacking direction before fabrication.",
-      ],
-    },
-    {
-      heading: "Two series to choose from",
-      body: [
-        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Cost-effective for most residential and semi-commercial installs.",
-        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break. Higher energy performance, helps meet NCC 7-star requirements.",
-      ],
-    },
-    {
-      heading: "Retractable flyscreen option",
-      body: [
-        "Bi-folding doors are the only product in our range that accept a retractable flyscreen — it rolls back into a slim side cassette when not in use, so it stays out of the way when the doors are fully open.",
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price.",
+        "CWD100 — the 100mm thermally broken frame. Quieter rooms, less condensation, and the step up on the energy rating where you need it.",
       ],
     },
   ],

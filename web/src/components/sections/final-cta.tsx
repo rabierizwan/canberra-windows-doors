@@ -13,10 +13,10 @@ export function FinalCta() {
           <span className="block w-8 h-px bg-bronze" />
         </div>
         <h2 className="font-display text-4xl md:text-6xl text-green leading-[1.05] max-w-2xl mx-auto">
-          Let&apos;s build something considered.
+          {site.closing.headline}
         </h2>
-        <p className="mt-6 text-green/70 max-w-md mx-auto">
-          Tell us about your project. We&apos;ll respond within one business day.
+        <p className="mt-6 text-green/70 max-w-xl mx-auto leading-relaxed">
+          {site.closing.body}
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
           <Button href="/request-a-quote" variant="primary" size="lg">

@@ -9,21 +9,21 @@ export const slidingWindowsCanberra: Product = {
   metaDescription:
     "High-quality aluminium sliding windows that maximise natural light and ventilation while maintaining a sleek, contemporary appearance.",
   intro: [
-    "We specialise in high-quality aluminium sliding windows that seamlessly blend style, functionality and durability. Designed to maximise natural light and ventilation while maintaining a sleek, contemporary appearance.",
-    "Stylish, highly energy-efficient, secure and built to last.",
+    "A horizontal sash on a smooth track. Quiet to open, easy to keep clean, with generous glass and slim sightlines.",
+    "Choose CWD80 for the everyday room, or CWD100 thermally broken where you want the room sealed and quiet.",
   ],
   benefits: [
     {
-      title: "Double-Glazed as Standard",
-      body: "A 5+12A+5 insulating glass unit dampens noise and steadies indoor temperature — included in every unit, not an upgrade.",
+      title: "Quiet, one-handed open.",
+      body: "Premium roller tracks under a continuous seal. The sash glides under finger pressure and closes flush.",
     },
     {
-      title: "Wide Aperture, Sleek Sightline",
-      body: "Up to 50% of the opening clears for ventilation, with thin 100mm frames keeping the view open.",
+      title: "Generous glass.",
+      body: "Slim frames keep the view open, so the wall reads as light and not as aluminium.",
     },
     {
-      title: "Smooth Glide, Quiet Close",
-      body: "Premium roller tracks and continuous seals — opens with one hand, closes flush against EPDM gaskets.",
+      title: "Easy to live with.",
+      body: "Wipes clean from the inside, locks securely, and stays draught-free season to season.",
     },
   ],
   spec: {
@@ -46,16 +46,10 @@ export const slidingWindowsCanberra: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Custom Sliding Windows Installation",
+      heading: "Same window, two frames.",
       body: [
-        "Double or triple glazing, acoustic glass for noise reduction, thermal break frames for insulation, security locks and flyscreens.",
-        "Professional installers ensure compliance with Australian Standards and local Canberra building codes.",
-      ],
-    },
-    {
-      heading: "Repairs & Replacements",
-      body: [
-        "Track and roller repairs, glass replacement, weatherproofing, hardware upgrades.",
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price.",
+        "CWD100 — the 100mm thermally broken frame. Quieter rooms, less condensation, and a step up on the energy rating.",
       ],
     },
   ],

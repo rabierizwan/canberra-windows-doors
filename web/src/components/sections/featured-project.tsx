@@ -9,7 +9,7 @@ export function FeaturedProject() {
       <Container>
         <div className="flex items-center gap-4 mb-10">
           <span className="block w-8 h-px bg-bronze" />
-          <span className="eyebrow">A Recent Project · {featuredProject.location.split(",")[1]?.trim()}</span>
+          <span className="eyebrow">A recent project · {featuredProject.location}</span>
         </div>
 
         <h2 className="font-display text-4xl md:text-5xl text-green max-w-3xl mb-12">

@@ -21,15 +21,14 @@ export function MaintenancePledge() {
           </div>
           <div className="md:col-span-6 md:col-start-7 space-y-5 text-ivory/75 leading-relaxed">
             <p>
-              When CW&amp;D supplies <em>and</em> installs your windows or doors,
-              the same team stays available for the life of the product — on
-              hand for adjustments, weather-seal replacements and hardware
-              tune-ups whenever you need them.
+              When we supply and install your doors, the same team stays close
+              for the life of the product. Seals, adjustments, hardware tune-ups
+              — handled by the people who set them in the first place.
             </p>
             <p>
-              We service the windows and doors we&apos;ve fitted ourselves, so
-              what you choose today keeps performing in five, ten, fifteen
-              years.
+              For supply-only orders, your installer becomes the point of contact
+              for adjustments and aftercare. Either way, every frame we send out
+              is ready to be looked after properly.
             </p>
           </div>
         </div>

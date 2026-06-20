@@ -14,22 +14,21 @@ export const stackerDoor: Product = {
   metaDescription:
     "Multi-panel stacking aluminium doors that slide on parallel tracks to clear wide openings without a swing arc. Available in the 80 mm Semi-Commercial or 100 mm Thermally Broken Series.",
   intro: [
-    "A stacker door is a multi-panel sliding system — typically three or four glazed panels running on parallel tracks. As you open the door, each panel slides behind the next, stacking out of the way and clearing a wide aperture.",
-    "Where a bi-folding door concertinas, a stacker door slides — quieter motion, no protruding folded leaves, and panels can be sized for very wide openings without losing structural integrity.",
-    "Available in the 80 mm Semi-Commercial Series (CWD80) for cost-effective residential installs, or the 100 mm Thermally Broken Windows (CWD100) when energy performance matters most.",
+    "Three or four panels on parallel tracks. Each one slides behind the next and stacks neatly at the end of the run, clearing a wide opening without a swing arc and without folded leaves to step around.",
+    "Choose CWD80 for the elegant semi-commercial frame, or CWD100 thermally broken where the wider opening needs the extra performance.",
   ],
   benefits: [
     {
-      title: "Wide Aperture, Clean Lines",
-      body: "Three or four panels slide independently to stack at one or both ends, clearing the opening with no folded leaves protruding into the space.",
+      title: "Built for the wide opening.",
+      body: "Three or four panels engineered to your aperture. Stack to one side, or split-stack both ways.",
     },
     {
-      title: "Quieter Than Bi-fold",
-      body: "Smooth rollers on parallel tracks — no hinge action, no concertina motion. Operation stays consistent across full open and full close.",
+      title: "Clean lines, no concertina.",
+      body: "No protruding folded leaves, no hinge action mid-track. Just glass that moves where you tell it.",
     },
     {
-      title: "Sized to the Opening",
-      body: "Each panel is engineered to your aperture. Stack to the left, the right, or split-stack to both ends.",
+      title: "Steady on the rollers.",
+      body: "Premium roller hardware on parallel tracks, sized to the panel weight. Smooth open, smooth close, year on year.",
     },
   ],
   spec: {
@@ -51,18 +50,10 @@ export const stackerDoor: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Two series to choose from",
+      heading: "Same door, two frames.",
       body: [
-        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Cost-effective for most residential and semi-commercial installs.",
-        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break. Higher energy performance, helps meet NCC 7-star requirements.",
-      ],
-    },
-    {
-      heading: "Stacker vs sliding vs bi-fold",
-      body: [
-        "Sliding door — one or two panels, side-to-side. Best for narrower openings.",
-        "Stacker door — three or more panels, stacking behind each other. Best for wide openings where you want clean sightlines.",
-        "Bi-folding door — concertina action, panels fold to one side. Best when you want the full aperture completely open at once.",
+        "CWD80 — our 80mm semi-commercial profile. Dependable hardware, fair price, ready for most residential work.",
+        "CWD100 — the 100mm thermally broken frame. Quieter rooms, less condensation, and a step up on the energy rating where you need it.",
       ],
     },
   ],

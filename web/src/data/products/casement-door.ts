@@ -15,22 +15,21 @@ export const casementDoor: Product = {
   metaDescription:
     "Side-hinged glazed aluminium doors with full glass panels. Single or double-leaf. Available in the 80 mm Semi-Commercial or 100 mm Thermally Broken Series.",
   intro: [
-    "A casement door is side-hinged and swings open like a traditional door, but with a full glass panel set into a slim aluminium frame. Single-leaf for narrower openings, double-leaf (French-style) for wider apertures.",
-    "Suited to entries, courtyards and any opening where you want a traditional swing motion paired with the daylight of a fully glazed panel.",
-    "Available in the 80 mm Semi-Commercial Series (CWD80) for everyday residential entries, or the 100 mm Thermally Broken Windows (CWD100) when energy performance matters most.",
+    "Side-hinged. A full glazed panel in a slim aluminium frame, weighted to swing true and seal properly when closed.",
+    "Single-leaf for narrower openings, double-leaf for French-door pairs across wider spans. CWD80 for everyday entries, CWD100 thermally broken where the room needs sealing in.",
   ],
   benefits: [
     {
-      title: "Light Without Compromise",
-      body: "A full glass panel in a slim aluminium frame — natural light reaches deep into the room while the door itself stays visually quiet.",
+      title: "Light, without losing the door.",
+      body: "A full glass panel in a slim frame. Daylight reaches deep into the room and the door itself stays visually quiet.",
     },
     {
-      title: "Single or Double Leaf",
-      body: "One leaf for narrower openings, two for French-door pairs across wider apertures. Hinged left, right or split.",
+      title: "Single or double leaf.",
+      body: "One leaf for the everyday entry, two for the French-door pair. Hinged left, right or split — whatever the space calls for.",
     },
     {
-      title: "Multi-Point Locking",
-      body: "Premium SIEGENIA / Roto hardware with multi-point engagement — secure when closed, smooth when opened.",
+      title: "Locked in properly.",
+      body: "Multi-point engagement on premium hardware. Secure when closed, smooth on the hinge when opened.",
     },
   ],
   spec: {
@@ -52,10 +51,10 @@ export const casementDoor: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Two series to choose from",
+      heading: "Same door, two frames.",
       body: [
-        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame, double-glazed and well-sealed, suited to most residential and semi-commercial entries.",
-        "100 mm Thermally Broken Windows (CWD100) — a thermally broken 100mm frame that minimises heat transfer, for projects targeting the highest energy performance.",
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price.",
+        "CWD100 — the 100mm thermally broken frame. Quieter rooms, less condensation, and a step up on the energy rating.",
       ],
     },
   ],

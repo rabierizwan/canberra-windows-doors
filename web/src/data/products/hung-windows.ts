@@ -9,21 +9,21 @@ export const hungWindows: Product = {
   metaDescription:
     "Vertical-sliding sash windows with a classical sightline. Available in the 80 mm Semi-Commercial Series or the 100 mm Thermally Broken Windows.",
   intro: [
-    "A hung window slides vertically — one sash, or two for a double-hung. The form is classical but the engineering is modern: balanced sashes, cam-lock hardware and continuous EPDM seals.",
-    "Available in the 80 mm Semi-Commercial Series (CWD80) for everyday residential and heritage-style installs, or the 100 mm Thermally Broken Windows (CWD100) when energy performance matters most.",
+    "A vertically-sliding sash. One sash, or two for a double-hung. The classical silhouette, kept properly sealed by modern hardware.",
+    "Choose CWD80 for the everyday heritage-style frame, or CWD100 thermally broken for a quieter room and a stronger energy rating.",
   ],
   benefits: [
     {
-      title: "Classical Sightline",
-      body: "Vertical sashes give a timeless, heritage-appropriate look that suits traditional Canberra homes and modern reinterpretations alike.",
+      title: "A classical sightline.",
+      body: "The traditional vertical-sashed look — at home in a Canberra cottage, equally at home in a modern reinterpretation.",
     },
     {
-      title: "No Projection, No Swing",
-      body: "Sashes slide vertically — nothing swings into the room, nothing reaches out into pathways or balconies.",
+      title: "Nothing swings, nothing projects.",
+      body: "Sashes slide vertically. Nothing reaches into the room, nothing reaches out onto a walkway or balcony.",
     },
     {
-      title: "Adjustable Airflow",
-      body: "On double-hung units, opening both top and bottom sashes pulls warm air out high and draws fresh air in low.",
+      title: "Air, where you want it.",
+      body: "On the double-hung, open the top sash to let warm air out, the bottom sash to draw cool air in.",
     },
   ],
   spec: {
@@ -46,16 +46,10 @@ export const hungWindows: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Two series to choose from",
+      heading: "Same window, two frames.",
       body: [
-        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Cost-effective for most residential and heritage-style installs.",
-        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break. Higher energy performance, helps meet NCC 7-star requirements.",
-      ],
-    },
-    {
-      heading: "Custom Installation Options",
-      body: [
-        "Customisation includes double-glazed glass for insulation, acoustic-rated glass for soundproofing, UV-blocking coatings, and flyscreen and lock upgrades.",
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price.",
+        "CWD100 — the 100mm thermally broken frame. Quieter rooms, less condensation, and a step up on the energy rating.",
       ],
     },
   ],

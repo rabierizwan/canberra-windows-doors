@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Media } from "@/components/ui/media";
-import { Button } from "@/components/ui/button";
 import { MaintenancePledge } from "@/components/sections/maintenance-pledge";
 import { FinalCta } from "@/components/sections/final-cta";
 import { getProductsByCategory } from "@/data/products";
@@ -10,70 +9,82 @@ import { getProductsByCategory } from "@/data/products";
 export const metadata: Metadata = {
   title: "Doors",
   description:
-    "The CW&D doors collection — premium aluminium and glass doors for Canberra and Sydney homes. Sliding, folding and casement options.",
+    "Four ways to open a wall. Premium aluminium doors supplied across Canberra and Sydney, with installation and aftercare from the same team.",
 };
 
-/** Four "find your door" categories — matches the four door products. */
+/** Decision guide — one card per door category. */
 const decisionGuide = [
   {
-    label: "For everyday",
+    label: "For the everyday opening",
     title: "Sliding",
     body:
-      "One or two glazed panels on rollers — the everyday opening for connecting indoor rooms to outdoor spaces.",
+      "Glide one panel past another and let the room breathe. Smooth on the track, low maintenance, generous glass.",
     href: "/services/sliding-door",
   },
   {
-    label: "For wide openings",
+    label: "For the wide aperture",
     title: "Stacker",
     body:
-      "Three or four panels that stack behind one another — clean sightlines across very wide apertures.",
+      "Three or four panels that stack neatly behind one another, clearing the opening when you want it gone.",
     href: "/services/stacker-door",
   },
   {
-    label: "For entertaining",
+    label: "For opening it all up",
     title: "Bi-folding",
     body:
-      "Multi-panel concertina that clears the full aperture — for spaces that open right up when you want them to.",
+      "A concertina across the full opening. When it's folded back, the indoors and outdoors are one room.",
     href: "/services/folding-door",
   },
   {
-    label: "For traditional entries",
+    label: "For a classic entry",
     title: "Casement",
     body:
-      "Side-hinged glazed door — the classic swing motion paired with a full glass panel. Single or double-leaf.",
+      "Side-hinged on robust hardware. The traditional swing in a full-glazed frame — single or double-leaf.",
     href: "/services/casement-door",
   },
 ];
+
+/** Longer-form descriptions used in "The full range" cards. */
+const fullRangeBlurb: Record<string, string> = {
+  "sliding-door":
+    "Our most asked-for door. Generous glass, easy travel, weather-tight at the meeting stile.",
+  "stacker-door":
+    "Three or four panels stacked behind one another. Built for wide openings without losing the line of the wall.",
+  "folding-door":
+    "Folds away in a stack so the opening reads as a single, uninterrupted line — outdoor room when you want it.",
+  "casement-door":
+    "Hinged at the side, weighted to swing true. A formal entry that handles weather with the same hardware as our windows.",
+};
 
 export default function DoorsIndexPage() {
   const doors = getProductsByCategory("doors");
 
   return (
     <>
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section className="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-rule">
         <Container>
           <div className="flex items-center gap-4 mb-6">
             <span className="block w-8 h-px bg-bronze" />
-            <span className="eyebrow">The Collection</span>
+            <span className="eyebrow">The collection</span>
           </div>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-green leading-[1.05] max-w-4xl">
-            The doors collection.
+            The doors.
           </h1>
-          <p className="mt-8 text-lg text-green/70 max-w-2xl leading-relaxed">
-            Considered, robust, made for the way you live. Premium aluminium
-            and glass doors — supplied across Canberra and Sydney, installed
-            with the same hands that maintain them.
+          <p className="mt-8 text-lg text-green/75 max-w-2xl leading-relaxed">
+            Four ways to open a wall — each one engineered the same way:
+            considered profiles, proper hardware, and the option of a thermally
+            broken frame whenever the room asks for it.
           </p>
         </Container>
       </section>
 
-      {/* DECISION GUIDE */}
+      {/* ── DECISION GUIDE ── */}
       <section className="py-24 md:py-32">
         <Container>
           <div className="flex items-center gap-4 mb-12">
             <span className="block w-8 h-px bg-bronze" />
-            <span className="eyebrow">Find Your Door</span>
+            <span className="eyebrow">Find your door</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-green max-w-2xl mb-16">
             Choose by how you live.
@@ -101,12 +112,12 @@ export default function DoorsIndexPage() {
         </Container>
       </section>
 
-      {/* THE FULL COLLECTION */}
+      {/* ── THE FULL RANGE ── */}
       <section className="py-24 md:py-32 bg-ivory-warm border-y border-rule">
         <Container>
           <div className="flex items-center gap-4 mb-12">
             <span className="block w-8 h-px bg-bronze" />
-            <span className="eyebrow">Every Door We Offer</span>
+            <span className="eyebrow">Every door we offer</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl text-green mb-16 max-w-2xl">
             The full range.
@@ -135,13 +146,12 @@ export default function DoorsIndexPage() {
                     {p.spec?.openingStyle ?? p.spec?.model ?? ""}
                   </span>
                 </div>
-                {p.intro?.[0] && (
-                  <p className="mt-3 text-green/70 leading-relaxed line-clamp-3">
-                    {p.intro[0]}
-                  </p>
-                )}
+                <p className="mt-3 text-green/70 leading-relaxed line-clamp-3">
+                  {fullRangeBlurb[p.slug] ?? p.intro?.[0]}
+                </p>
                 <span className="mt-5 inline-flex items-center gap-2 eyebrow text-green group-hover:text-bronze transition-colors">
-                  Explore {p.heading} <span aria-hidden>→</span>
+                  Explore {p.heading.toLowerCase()}{" "}
+                  <span aria-hidden>→</span>
                 </span>
               </Link>
             ))}
@@ -149,10 +159,10 @@ export default function DoorsIndexPage() {
         </Container>
       </section>
 
-      {/* MAINTENANCE PLEDGE */}
+      {/* ── AFTERCARE PLEDGE ── */}
       <MaintenancePledge />
 
-      {/* FINAL CTA */}
+      {/* ── CLOSING CTA ── */}
       <FinalCta />
     </>
   );

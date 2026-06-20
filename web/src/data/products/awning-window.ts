@@ -15,25 +15,21 @@ export const awningWindow: Product = {
   metaDescription:
     "Aluminium awning windows — top-hung sashes that ventilate in any weather. Available in the 80 mm Semi-Commercial Series or the 100 mm Thermally Broken Windows for NCC 7-star performance.",
   intro: [
-    "An awning window is top-hung and opens outward from the base, drawing fresh air through even in light rain. A smooth hand-crank winder gives precise control over the opening — ideal for kitchens, bathrooms and high or hard-to-reach windows.",
-    //"Available in the 80 Semi-Commercial Series or the 100 Thermally Broken Windows. Double-glazed as standard.",
+    "Top-hung and outward-opening, the awning lets you keep the air moving even when the weather turns. A smooth hand-crank gives precise control of the opening, which is exactly what you want above a sink or behind a bench.",
+    "Choose CWD80 for the elegant semi-commercial frame, or CWD100 thermally broken for a quieter room and a stronger energy rating.",
   ],
   benefits: [
     {
-      title: "Ventilate in Any Weather",
-      body: "The outward, bottom-opening sash channels fresh air through while shielding the opening from rain.",
+      title: "Air through, rain out.",
+      body: "The sash opens outward from the base, so a light shower doesn't shut the room down.",
     },
     {
-      title: "Hand-Crank Control",
-      body: "A winder operator opens and closes the sash smoothly — easy to reach above benches and sinks.",
+      title: "Smooth on the crank.",
+      body: "A proper winder handles the opening cleanly — easy to reach above benches, sinks and bath edges.",
     },
     {
-      title: "Double-Glazed Comfort",
-      body: "A 5-12-5 insulating glass unit dampens outside noise and steadies indoor temperature.",
-    },
-    {
-      title: "Sealed Against Draughts",
-      body: "Continuous EPDM seals and silicone-bedded glazing keep wind and water out, year after year.",
+      title: "Sealed for the long term.",
+      body: "Continuous EPDM seals and silicone-bedded glazing. Built to keep wind and water out, year on year.",
     },
   ],
   spec: {
@@ -56,18 +52,10 @@ export const awningWindow: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Two series to choose from",
+      heading: "Same window, two frames.",
       body: [
-        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Double-glazed, well-sealed and cost-effective for the majority of residential and semi-commercial openings.",
-        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break separating the inside and outside faces. Minimises heat transfer and helps new builds and renovations meet NCC 7-star energy requirements.",
-        "Not sure which suits your project? See our thermal-broken explainer, or ask us for a recommendation when you request a quote.",
-      ],
-    },
-    {
-      heading: "Double-Glazed as Standard",
-      body: [
-        "Every awning window is glazed with an insulating glass unit — two panes of toughened glass separated by a 12mm air cavity (5 + 12A + 5). The sealed cavity slows heat transfer and reduces outside noise.",
-        "Glass is bedded in silicone with continuous EPDM weather seals around the frame and sash, forming a tight, durable barrier against wind and water.",
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price. The right choice for most bedrooms, kitchens and bathrooms.",
+        "CWD100 — the 100mm frame split internally by a reinforced polyamide thermal break. Quieter rooms, less condensation, and the help you need to push the energy rating up.",
       ],
     },
   ],

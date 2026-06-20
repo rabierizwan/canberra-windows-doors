@@ -28,27 +28,35 @@ export default function HomePage() {
       <Manifesto />
 
       {/* 05 — Signature product */}
-      <SignatureProduct product={flagship} />
+      <SignatureProduct
+        product={flagship}
+        body="Top-hung and outward-opening, the awning lets you keep the air moving even when the weather turns. Thermally broken in our CWD100 series, with the same fit and finish you'll find on every frame we send out."
+        ctaLabel="Explore the awning window"
+      />
 
       {/* 06 — Doors collection */}
       <CollectionGrid
         id="collection"
         eyebrow="Doors"
-        heading="The doors collection."
+        heading="The doors."
+        body="Four ways to open a wall. Each one engineered the same way: thermally broken where you need it, single-fixed-frame where you don't, and finished in your choice of colour."
         products={doors}
         tone="ivory"
         cols={4}
         viewAllHref="/doors"
+        viewAllLabel="View all doors"
       />
 
       {/* 07 — Windows collection */}
       <CollectionGrid
         eyebrow="Windows"
-        heading="The windows collection."
+        heading="The windows."
+        body="From quiet bedrooms to wide kitchen openings, the right window does its work without asking for attention. Choose by how the room is used — we'll match the series and the glazing."
         products={windows}
         tone="green"
         cols={4}
         viewAllHref="/windows"
+        viewAllLabel="View all windows"
       />
 
       {/* 08 — Featured project */}

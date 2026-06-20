@@ -10,21 +10,21 @@ export const slidingDoor: Product = {
   metaDescription:
     "Aluminium sliding doors with large glazed panels that glide aside on premium roller tracks. Available in the 80 mm Semi-Commercial Series or the 100 mm Thermally Broken Windows.",
   intro: [
-    "A sliding door is built from large glazed panels that glide along premium roller tracks — opening the room to the outside without a swing arc and without giving up floor space.",
-    "Available in the 80 mm Semi-Commercial Series (CWD80) for everyday residential builds, or the 100 mm Thermally Broken Windows (CWD100) when energy performance matters most.",
+    "Two glazed panels on a smooth track. One slides past the other and opens the wall without using floor space, without swing arcs, and without losing the line of the architecture.",
+    "Choose CWD80 for the elegant semi-commercial frame, or step up to CWD100 thermally broken when the room asks for higher performance.",
   ],
   benefits: [
     {
-      title: "Seamless Indoor–Outdoor Flow",
-      body: "Wide glazed panels glide aside to merge living spaces with patios and decks — no swing arc, no lost floor space.",
+      title: "Indoor and outdoor, joined.",
+      body: "Generous glass and slim sightlines. Closed, the room is sealed and quiet. Open, the deck or garden is part of the living room.",
     },
     {
-      title: "Maximum Natural Light",
-      body: "Slim sightlines and large glass apertures pull daylight deep into the room.",
+      title: "Quiet on the track.",
+      body: "Premium rollers and a clean head/sill profile. No drag, no rattle — the door moves the way it should, year on year.",
     },
     {
-      title: "Multi-Point Locking",
-      body: "Robust SIEGENIA / Doric hardware with anti-lift catches — sliding doors made secure by engineering, not by accident.",
+      title: "Locked in properly.",
+      body: "Multi-point locking and anti-lift catches as standard. Hardware that holds up to daily use without working loose.",
     },
   ],
   spec: {
@@ -47,10 +47,10 @@ export const slidingDoor: Product = {
   performance: ["Waterproof", "Heat / Cold resistance", "Soundproof", "Wind resistance", "Airtight", "Safe"],
   sections: [
     {
-      heading: "Two series to choose from",
+      heading: "Same door, two frames.",
       body: [
-        "80 mm Semi-Commercial Series (CWD80) — a standard aluminium frame on an 80mm profile. Cost-effective for most residential and semi-commercial installs.",
-        "100 mm Thermally Broken Windows (CWD100) — a 100mm frame with a reinforced polyamide thermal break. Higher energy performance, helps meet NCC 7-star requirements.",
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price. The right choice for most homes.",
+        "CWD100 — the 100mm frame split internally by a reinforced polyamide thermal break. Quieter rooms, less condensation, and the help you need to push the energy rating up.",
       ],
     },
   ],

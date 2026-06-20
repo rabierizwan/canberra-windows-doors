@@ -22,9 +22,10 @@ export default function QuotePage() {
           <h1 className="font-display text-5xl md:text-7xl text-green leading-[1.05] max-w-3xl">
             Request a quote.
           </h1>
-          <p className="mt-8 text-lg text-green/70 max-w-2xl">
-            Tell us about your project. We&apos;ll respond within one business
-            day with options, timing and pricing.
+          <p className="mt-8 text-lg text-green/75 max-w-2xl leading-relaxed">
+            A few details about the project — the rooms, the sizes if you have
+            them, your timing. We&apos;ll come back within one business day
+            with options and a fair price.
           </p>
         </Container>
       </section>
@@ -69,20 +70,19 @@ export default function QuotePage() {
                   Hours
                 </span>
                 <p className="mt-4 text-sm text-green/80 leading-relaxed">
-                  {site.hours.weekdays}
+                  {site.hours.weekdays}.
                   <br />
-                  {site.hours.weekend}
+                  {site.hours.weekend}.
                 </p>
               </div>
 
               <div className="border-t border-rule pt-6">
                 <span className="eyebrow eyebrow-muted not-italic font-sans">
-                  Service Area
+                  Service area
                 </span>
                 <p className="mt-4 text-sm text-green/80 leading-relaxed">
-                  Canberra &amp; the ACT
-                  <br />
-                  All Sydney suburbs
+                  Supply and installation across the ACT. Australia-wide supply
+                  with installation on request throughout Sydney.
                 </p>
               </div>
             </aside>

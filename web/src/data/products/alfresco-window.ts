@@ -12,33 +12,30 @@ export const alfrescoWindow: Product = {
   metaDescription:
     "Custom glazing solutions to convert open patios into weather-resistant alfresco spaces or light-filled sunrooms that work year-round.",
   intro: [
-    "We specialise in custom glazing, window and door solutions to help homeowners convert open patios into weather-resistant spaces or create light-filled sunrooms that function year-round.",
+    "An exposed patio, deck or covered outdoor area becomes a room you can use through the year — sealed in, properly glazed, no draughts.",
+    "We design and supply the glazing system, match it to the existing structure, and install it as a single, considered enclosure.",
+  ],
+  benefits: [
+    {
+      title: "A room you actually use.",
+      body: "From three months of the year to twelve. Sheltered from wind and rain, warm enough to sit in through winter.",
+    },
+    {
+      title: "Light, with control.",
+      body: "Floor-to-ceiling glazing where it counts, with proper seals so the room doesn't draw in heat or noise.",
+    },
+    {
+      title: "Matched to the house.",
+      body: "Framing detailed to your existing structure. Sliding or bi-folding doors where you want access, fixed glass where you don't.",
+    },
   ],
   sections: [
     {
-      heading: "Exquisite Alfresco Conversions",
+      heading: "What we cover.",
       body: [
-        "We transform open-air patios, decks and covered outdoor areas into weather-resistant alfresco window spaces using premium glazed enclosures.",
-        "What we provide: custom double-glazed windows for thermal control · sliding or bi-fold glass doors for flexible access · framing systems matching your existing home structure.",
-      ],
-    },
-    {
-      heading: "Why Convert Your Alfresco",
-      body: [
-        "Enjoy the space all year · Protect outdoor furniture from the elements · Add extra living or dining area · Increase energy efficiency and home value.",
-      ],
-    },
-    {
-      heading: "Sunrooms",
-      body: [
-        "Bright, comfortable spaces built to last. Our sunroom solutions feature floor-to-ceiling glass panels and advanced insulated glazing units (IGUs) for all-season comfort.",
-        "Benefits: comfortable seasonal use · increased home resale value · enhanced natural light · improved indoor-outdoor flow · better garden and yard views.",
-      ],
-    },
-    {
-      heading: "Complete Glazing Solutions",
-      body: [
-        "Design consultation, product selection, professional installation and ongoing support with warranties.",
+        "Alfresco conversions — patio or deck enclosures that sit cleanly against the existing roofline.",
+        "Sunrooms — purpose-built glazed rooms with double-glazed insulated units for year-round comfort.",
+        "Custom glazing — door and window combinations sized to the opening, finished to match the rest of the house.",
       ],
     },
   ],

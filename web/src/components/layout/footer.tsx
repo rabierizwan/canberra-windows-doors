@@ -12,8 +12,7 @@ export function Footer() {
           <div className="md:col-span-4">
             <Logo variant="light" width={140} />
             <p className="mt-8 text-sm leading-relaxed text-ivory/60 max-w-xs">
-              {site.tagline}. Premium aluminium windows and doors, supplied
-              across Canberra and Sydney.
+              {site.footerTagline}
             </p>
           </div>
 

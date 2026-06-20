@@ -8,24 +8,30 @@ export const casementWindow: Product = {
   metaDescription:
     "Side-hinged casement windows for maximum ventilation and unobstructed views. Premium aluminium with advanced locking mechanisms.",
   intro: [
-    "We specialise in offering top-quality casement window services in Canberra. These side-hinged units open outward, allowing for maximum ventilation and stunning views — ideal for both upgrade and new installation projects.",
+    "Side-hinged and swings wide. When you want the most air through the smallest frame, the casement is the right window.",
+    "Choose CWD80 for the elegant semi-commercial frame, or CWD100 thermally broken for a quieter room and a stronger energy rating.",
   ],
   benefits: [
     {
-      title: "Excellent Ventilation",
-      body: "Adjust the opening angle to regulate air intake — keeps your home fresh and comfortable.",
+      title: "The most air, the cleanest view.",
+      body: "Swings out of the aperture entirely, so the outlook reads as glass — and the breeze comes through unobstructed.",
     },
     {
-      title: "Unobstructed Views",
-      body: "When opened, casement windows create a clear line of sight to the outdoors.",
+      title: "The tightest seal we make.",
+      body: "Cam-lock hardware pulls the sash hard against continuous EPDM gaskets. The most airtight openable window in our range.",
     },
     {
-      title: "Tightest Seal of Any Openable",
-      body: "Cam-lock hardware pulls the sash hard against continuous EPDM gaskets — casements are the most airtight openable window format.",
+      title: "Locked in properly.",
+      body: "Multi-point engagement on premium hardware. Secure when closed, smooth on the hinge when opened.",
     },
+  ],
+  sections: [
     {
-      title: "Security Features",
-      body: "Equipped with advanced locking mechanisms for enhanced security and peace of mind.",
+      heading: "Same window, two frames.",
+      body: [
+        "CWD80 — our 80mm semi-commercial profile. Tidy lines, dependable hardware, fair price.",
+        "CWD100 — the 100mm thermally broken frame. Quieter rooms, less condensation, and a step up on the energy rating.",
+      ],
     },
   ],
   spec: {

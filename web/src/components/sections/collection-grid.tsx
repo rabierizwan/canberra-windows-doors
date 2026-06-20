@@ -7,6 +7,8 @@ import type { Product } from "@/types/product";
 type CollectionGridProps = {
   eyebrow: string;
   heading: string;
+  /** Optional body paragraph rendered below the heading */
+  body?: string;
   products: Product[];
   /** "ivory" → ivory bg, dark text. "green" → green bg, light text. */
   tone?: "ivory" | "green";
@@ -14,6 +16,8 @@ type CollectionGridProps = {
   cols?: 2 | 3 | 4;
   /** href for the "View all" link */
   viewAllHref?: string;
+  /** Label for the view-all link, e.g. "View all doors" */
+  viewAllLabel?: string;
   /** id for in-page anchor links */
   id?: string;
 };
@@ -25,10 +29,12 @@ type CollectionGridProps = {
 export function CollectionGrid({
   eyebrow,
   heading,
+  body,
   products,
   tone = "ivory",
   cols = 4,
   viewAllHref,
+  viewAllLabel = "View all",
   id,
 }: CollectionGridProps) {
   const isGreen = tone === "green";
@@ -47,8 +53,8 @@ export function CollectionGrid({
       )}
     >
       <Container>
-        <div className="flex items-end justify-between mb-12 md:mb-16">
-          <div>
+        <div className="flex flex-col gap-6 mb-12 md:mb-16 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-4">
               <span className={cn("block w-8 h-px", isGreen ? "bg-bronze" : "bg-bronze")} />
               <span className="eyebrow">{eyebrow}</span>
@@ -61,16 +67,26 @@ export function CollectionGrid({
             >
               {heading}
             </h2>
+            {body && (
+              <p
+                className={cn(
+                  "mt-6 text-base md:text-lg leading-relaxed",
+                  isGreen ? "text-ivory/80" : "text-green/75",
+                )}
+              >
+                {body}
+              </p>
+            )}
           </div>
           {viewAllHref && (
             <Link
               href={viewAllHref}
               className={cn(
-                "hidden sm:inline-flex eyebrow transition-colors items-center gap-2",
+                "hidden sm:inline-flex eyebrow transition-colors items-center gap-2 shrink-0",
                 isGreen ? "text-ivory hover:text-bronze-soft" : "text-green hover:text-bronze",
               )}
             >
-              View all <span aria-hidden>→</span>
+              {viewAllLabel} <span aria-hidden>→</span>
             </Link>
           )}
         </div>

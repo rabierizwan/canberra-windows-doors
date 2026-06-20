@@ -13,26 +13,21 @@ export const thermalBreakWindow: Product = {
   metaDescription:
     "Thermally broken aluminium windows engineered for Canberra winters and Sydney summers. Better energy efficiency, less condensation, lower bills — built to meet NCC 2022 7-star requirements.",
   intro: [
-    // Definition first — establish authority before benefit selling.
-    "Aluminium conducts heat. Without intervention, a metal window frame becomes a thermal bridge that pulls warmth out in winter and lets it in during summer. A thermal break solves this — a strip of reinforced polyamide is engineered into the frame, separating its inside and outside faces. The result is a window that performs more like timber but lasts like aluminium.",
-    "We supply premium thermal-break frames manufactured in Europe, paired with double or triple glazing as standard, and tuned for Australian climates — Canberra's frosty mornings, Sydney's summer afternoons, and everything in between.",
+    "Aluminium conducts heat. Left alone, a metal frame becomes a thermal bridge: warmth leaves the room in winter, comes back in summer. A thermal break splits the frame internally with a reinforced polyamide bar, so the inside face stays close to room temperature.",
+    "We supply premium thermal-broken frames in our CWD100 series — double-glazed as standard, tuned for Canberra winters and Sydney summers.",
   ],
   benefits: [
     {
-      title: "Greater Energy Efficiency",
-      body: "The polyamide barrier dramatically reduces heat transfer through the frame, keeping warm air in during winter and out during summer. Lower heating and cooling load, lower running costs.",
+      title: "A more efficient room.",
+      body: "Less heat lost through the frame in winter, less gained in summer. Lower heating and cooling load, lower running costs.",
     },
     {
-      title: "Year-Round Comfort",
-      body: "No more cold-spot zones near windows in July, no more sun-baked frames in January. Surface temperatures stay closer to room temperature across the entire opening.",
+      title: "No more cold-spots.",
+      body: "The inside face of the frame stays close to room temperature, so the air near the window feels the same as the rest of the room.",
     },
     {
-      title: "Less Condensation",
-      body: "Cold aluminium plus warm interior air equals fog and dripping sills. A thermal break keeps the inside face of the frame warmer, so moisture has nowhere to form. Better for the home, better for the frame.",
-    },
-    {
-      title: "Long-Term Durability",
-      body: "Premium-grade aluminium resists warping, corrosion and weathering far longer than timber or uPVC. The polyamide insert is stable across decades of temperature swings.",
+      title: "Less condensation.",
+      body: "A warm inside frame doesn't pull moisture out of the air. Less fog on the glass, dry sills, longer-lived joinery.",
     },
   ],
   spec: {
@@ -62,25 +57,12 @@ export const thermalBreakWindow: Product = {
   ],
   sections: [
     {
-      heading: "Built for Australia's 7-star future",
+      heading: "When a thermal break earns its keep.",
       body: [
-        "In 2022, the National Construction Code lifted the residential energy performance requirement from 6 to 7 stars under NatHERS — a meaningful jump, particularly in cooler regions like the ACT and Sydney's western suburbs.",
-        "Standard single-glazed aluminium frames make 7 stars genuinely difficult to hit. Thermal-broken frames with double or triple glazing make it routine. If you're building, renovating or specifying for compliance, this is the frame system designed for the regulation, not retrofitted to it.",
-      ],
-    },
-    {
-      heading: "When thermal break matters most",
-      body: [
-        "Canberra: every degree of indoor warmth lost through cheap frames in July is a heating bill paid in August. Thermal-broken frames pay back fastest in cold-winter climates.",
-        "Sydney: summer heat gain through aluminium frames pushes air-conditioning loads up dramatically. A thermal break flattens the curve and reduces peak cooling demand.",
-        "New builds: meet 7-star NatHERS without compromising on natural light or window size.",
-        "Renovations: replacing single-glazed aluminium with thermal-broken frames is one of the highest-ROI upgrades for thermal comfort.",
-      ],
-    },
-    {
-      heading: "Premium European supply, fair Australian pricing",
-      body: [
-        "We import directly from established European manufacturers and supply across Canberra and Sydney without the distributor markup that inflates trade-channel pricing. Same product, considered design, sensible price.",
+        "Canberra winters: every degree of warmth lost through a cold frame in July is a heating bill paid in August.",
+        "Sydney summers: heat gain through bare aluminium pushes the air-conditioning hard. A thermal break flattens the peak.",
+        "New builds: a straightforward way to push the NatHERS rating up without compromising on glass area.",
+        "Renovations: one of the highest-return upgrades you can make to an older home for thermal comfort.",
       ],
     },
   ],

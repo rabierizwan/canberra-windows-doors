@@ -5,9 +5,6 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Media } from "@/components/ui/media";
 import { ImageSlider } from "@/components/ui/image-slider";
-import { SpecTable } from "@/components/product/spec-table";
-import { OptionList } from "@/components/product/option-list";
-import { TechnicalDrawings } from "@/components/product/technical-drawings";
 import {
   getProductBySlug,
   getAllSlugs,
@@ -43,10 +40,7 @@ export default async function ProductPage({ params }: PageProps) {
 
   return (
     <>
-      {/* HERO — editorial split: text inside container, image full-bleed right
-          The left column's lg:pl-[max(...)] math mirrors Container so the text
-          starts at the container's content edge, while the right image runs
-          all the way to the viewport edge. */}
+      {/* ── HERO — editorial split: text on the left, full-bleed image on the right ── */}
       <section className="bg-ivory border-b border-rule overflow-hidden">
         <div className="grid lg:grid-cols-2 items-stretch">
           {/* LEFT — text */}
@@ -56,7 +50,10 @@ export default async function ProductPage({ params }: PageProps) {
                 <span className="block w-8 h-px bg-bronze" />
                 <span className="eyebrow capitalize">{product.category}</span>
               </div>
-              <h1 className="mt-6 font-display text-green leading-[1.02]" style={{ fontSize: "clamp(3.5rem, 6vw, 6rem)" }}>
+              <h1
+                className="mt-6 font-display text-green leading-[1.02]"
+                style={{ fontSize: "clamp(3.5rem, 6vw, 6rem)" }}
+              >
                 {product.heading}
               </h1>
               {product.subheading && (
@@ -69,8 +66,6 @@ export default async function ProductPage({ params }: PageProps) {
               )}
               {product.intro?.length > 0 && (
                 <div className="mt-8 space-y-4 text-green/75 leading-relaxed">
-                  {/* Keep the hero light — show only the first paragraph here.
-                      Any further intro paragraphs surface in later sections. */}
                   <p>{product.intro[0]}</p>
                   {product.intro[1] && (
                     <p className="text-green/65">{product.intro[1]}</p>
@@ -85,8 +80,7 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* RIGHT — full-bleed image slider (falls back to single image,
-              then to a branded placeholder when no images are assigned) */}
+          {/* RIGHT — full-bleed image slider */}
           <div className="order-1 lg:order-2 h-full">
             <ImageSlider
               images={
@@ -106,49 +100,9 @@ export default async function ProductPage({ params }: PageProps) {
             />
           </div>
         </div>
-
-        {/* SPEC STRIP — at-a-glance facts beneath the hero */}
-        {product.spec && (
-          <div className="border-t border-rule">
-            <Container className="py-5">
-              <ul className="flex flex-wrap items-center justify-center md:justify-between gap-x-10 gap-y-3 text-[0.65rem] tracking-[0.22em] uppercase text-green/60 font-medium">
-                {product.spec.openingStyle && (
-                  <li className="inline-flex items-center gap-3">
-                    <span className="text-bronze">●</span>
-                    {product.spec.openingStyle}
-                  </li>
-                )}
-                {product.spec.profileWidth && (
-                  <li className="inline-flex items-center gap-3">
-                    <span className="text-bronze">●</span>
-                    {product.spec.profileWidth}
-                  </li>
-                )}
-                {product.spec.glassOptions && (
-                  <li className="inline-flex items-center gap-3">
-                    <span className="text-bronze">●</span>
-                    Double-Glazed Std.
-                  </li>
-                )}
-                {product.spec.glassStandard && (
-                  <li className="inline-flex items-center gap-3">
-                    <span className="text-bronze">●</span>
-                    {product.spec.glassStandard}
-                  </li>
-                )}
-                {product.spec.model && (
-                  <li className="hidden lg:inline-flex items-center gap-3">
-                    <span className="text-bronze">●</span>
-                    {product.spec.model}
-                  </li>
-                )}
-              </ul>
-            </Container>
-          </div>
-        )}
       </section>
 
-      {/* BENEFITS */}
+      {/* ── BENEFITS ── */}
       {product.benefits && product.benefits.length > 0 && (
         <section className="py-24 md:py-32">
           <Container>
@@ -171,99 +125,17 @@ export default async function ProductPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* SPEC + OPTIONS */}
-      {(product.spec ||
-        product.glassTypes ||
-        product.hardwareBrands ||
-        product.profileColors ||
-        product.flyscreens) && (
-        <section className="py-24 md:py-32 bg-ivory-warm border-y border-rule">
-          <Container>
-            <div className="grid lg:grid-cols-12 gap-12">
-              {product.spec && (
-                <div className="lg:col-span-5">
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="block w-8 h-px bg-bronze" />
-                    <span className="eyebrow">Specification</span>
-                  </div>
-                  <h2 className="font-display text-3xl md:text-4xl text-green mb-8">
-                    Built to standard.
-                  </h2>
-                  <SpecTable spec={product.spec} />
-                </div>
-              )}
-              <div
-                className={`space-y-8 ${
-                  product.spec ? "lg:col-span-6 lg:col-start-7" : "lg:col-span-12"
-                }`}
-              >
-                {product.glassTypes && (
-                  <OptionList label="Glass Types" items={product.glassTypes} />
-                )}
-                {product.glassColors && (
-                  <OptionList label="Glass Colours" items={product.glassColors} />
-                )}
-                {product.profileColors && (
-                  <OptionList label="Profile Colours" items={product.profileColors} />
-                )}
-                {product.hardwareBrands && (
-                  <OptionList label="Hardware Brands" items={product.hardwareBrands} />
-                )}
-                {product.flyscreens && (
-                  <OptionList label="Flyscreen Options" items={product.flyscreens} />
-                )}
-              </div>
-            </div>
-          </Container>
-        </section>
-      )}
-
-      {/* PERFORMANCE + APPLICATIONS */}
-      {(product.performance || product.applications) && (
-        <section className="py-24 md:py-32">
-          <Container className="space-y-16">
-            {product.performance && (
-              <div>
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="block w-8 h-px bg-bronze" />
-                  <span className="eyebrow">Performance</span>
-                </div>
-                <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-rule border border-rule">
-                  {product.performance.map((p) => (
-                    <li
-                      key={p}
-                      className="bg-ivory py-8 text-center text-sm text-green"
-                    >
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {product.applications && (
-              <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="block w-8 h-px bg-bronze" />
-                  <span className="eyebrow">Applications</span>
-                </div>
-                <p className="text-2xl md:text-3xl font-display text-green/80 leading-snug">
-                  {product.applications.join(" · ")}
-                </p>
-              </div>
-            )}
-          </Container>
-        </section>
-      )}
-
-      {/* FREE-FORM SECTIONS */}
+      {/* ── FREE-FORM SECTIONS (e.g. "Same door, two frames") ── */}
       {product.sections && product.sections.length > 0 && (
-        <section className="py-24 border-t border-rule">
+        <section className="py-24 border-t border-rule bg-ivory-warm">
           <Container>
             <div className="space-y-16 max-w-3xl">
               {product.sections.map((s, i) => (
                 <div key={i}>
-                  <h2 className="font-display text-3xl text-green">{s.heading}</h2>
-                  <div className="mt-4 space-y-4 text-green/75 leading-relaxed">
+                  <h2 className="font-display text-3xl md:text-4xl text-green">
+                    {s.heading}
+                  </h2>
+                  <div className="mt-6 space-y-4 text-green/75 leading-relaxed">
                     {s.body.map((p, j) => (
                       <p key={j}>{p}</p>
                     ))}
@@ -275,10 +147,7 @@ export default async function ProductPage({ params }: PageProps) {
         </section>
       )}
 
-      {/* TECHNICAL DRAWINGS — rendered only when product.drawingType is set */}
-      {product.drawingType && <TechnicalDrawings type={product.drawingType} />}
-
-      {/* RELATED */}
+      {/* ── RELATED ── */}
       {related.length > 0 && (
         <section className="py-24 md:py-32 bg-green text-ivory">
           <Container>
