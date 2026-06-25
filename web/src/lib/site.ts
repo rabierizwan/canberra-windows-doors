@@ -58,7 +58,7 @@ export const site = {
   contact: {
     phonePrimary: "0423 791 652",
     phonePrimaryHref: "tel:+61423791652",
-    phoneAlt: "0403 306 714",
+    //phoneAlt: "0403 306 714",
     phoneAltHref: "tel:+61403306714",
     email: "info@canberrawindowsdoors.com.au",
     emailHref: "mailto:info@canberrawindowsdoors.com.au",
@@ -81,7 +81,7 @@ export const site = {
   },
 
   hours: {
-    weekdays: "Monday to Friday, 8:00am to 6:00pm",
+    weekdays: "Monday to Friday, 8:00am to 3:00pm",
     weekend: "Saturday and Sunday by appointment",
   },
 
