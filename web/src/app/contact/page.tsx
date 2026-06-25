@@ -71,14 +71,14 @@ export default function ContactPage() {
                     {site.contact.phonePrimary}
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href={site.contact.phoneAltHref}
                     className="hover:text-bronze transition-colors"
                   >
                     {site.contact.phoneAlt}
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
